@@ -1,0 +1,16 @@
+# standard gitignore file for next js project
+# see https://nextjs.org/docs/basic-features/ignoring-files-and-folders#creating-a-gitignore-file for more info
+# next js
+.DS_Store
+# next js
+node_modules
+# next js
+.next
+# next js
+out
+# next js
+public/build
+# next js
+.env.local
+.env.development
+.env.production
