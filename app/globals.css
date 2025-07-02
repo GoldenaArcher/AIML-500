@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -24,3 +25,41 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+@layer utilities {
+  /* Up */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0);     }
+  }
+  .animate-fade-in-up   { animation: fadeInUp   0.6s ease-out forwards; }
+
+  /* Down */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-24px); }
+    to   { opacity: 1; transform: translateY(0);      }
+  }
+  .animate-fade-in-down { animation: fadeInDown 0.6s ease-out forwards; }
+
+  /* Left */
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-24px); }
+    to   { opacity: 1; transform: translateX(0);      }
+  }
+  .animate-fade-in-left { animation: fadeInLeft 0.6s ease-out forwards; }
+
+  /* Right */
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(24px); }
+    to   { opacity: 1; transform: translateX(0);    }
+  }
+  .animate-fade-in-right{ animation: fadeInRight 0.6s ease-out forwards; }
+
+  /* general animation delay */
+  .anim-delay-200 { animation-delay: .2s; }
+  .anim-delay-400 { animation-delay: .4s; }
+  .anim-delay-600 { animation-delay: .6s; }
+  .anim-delay-800 { animation-delay: .8s; }
+}
+

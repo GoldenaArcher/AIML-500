@@ -3,7 +3,7 @@ import Artifact from "./artifact";
 
 const page = () => {
   return (
-    <main>
+    <main className="mx-auto max-w-[1280px] px-8 py-16">
       <Artifact />
     </main>
   );
