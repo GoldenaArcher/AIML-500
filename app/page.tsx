@@ -44,7 +44,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold">Selected Work</h2>
           <p className="mt-2 text-gray-700 dark:text-gray-300 max-w-[100%] sm:max-w-[720px]">
             Visit the&nbsp;
-            <a href="/artifacts" className="underline hover:text-teal-500">
+            <a href="./artifacts" className="underline hover:text-teal-500">
               artifacts
             </a>
             &nbsp;page for detailed case studies.
