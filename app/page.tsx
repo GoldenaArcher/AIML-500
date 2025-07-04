@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "./components/Reveal";
 
 export default function Home() {
@@ -44,9 +45,9 @@ export default function Home() {
           <h2 className="text-2xl font-semibold">Selected Work</h2>
           <p className="mt-2 text-gray-700 dark:text-gray-300 max-w-[100%] sm:max-w-[720px]">
             Visit the&nbsp;
-            <a href="./artifacts" className="underline hover:text-teal-500">
+            <Link href="/artifacts" className="underline hover:text-teal-500">
               artifacts
-            </a>
+            </Link>
             &nbsp;page for detailed case studies.
           </p>
         </section>
