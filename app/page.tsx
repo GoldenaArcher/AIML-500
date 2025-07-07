@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Reveal from "./components/Reveal";
+import Reveal from "./_components/reveal";
 
 export default function Home() {
   return (

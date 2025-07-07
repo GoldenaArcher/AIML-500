@@ -1,5 +1,5 @@
 import React from "react";
-import Artifact from "./artifact";
+import Artifact from "./_components/artifact";
 
 const page = () => {
   return (
