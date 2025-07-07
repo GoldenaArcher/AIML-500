@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="text-center py-6 text-sm text-gray-400 border-t border-white/10">
-      <div className="container flex justify-between mx-auto max-w-[1280px]">
+      <div className="container flex flex-col gap-y-5 sm:gap-y-0 sm:flex-row items-center justify-center sm:justify-between max-w-[80%] mx-auto sm:max-w-[1280px]">
         <p>© {new Date().getFullYear()} Lu Han. All rights reserved.</p>
         <ul className="flex gap-x-2">
           <li>
