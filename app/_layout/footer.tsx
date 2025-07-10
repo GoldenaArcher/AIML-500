@@ -12,8 +12,8 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub profile"
-              title="GitHub profile"
-              className="flex items-center justify-center text-gray-400 hover:text-black dark:hover:text-white hover:scale-105 transition ease-in-out"
+              title="GitHub profile"  
+              className="flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:scale-105 transition ease-in-out"
             >
               <FaGithub size={20} />
             </a>
@@ -25,7 +25,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="LinkedIn profile"
               title="LinkedIn profile"
-              className="flex items-center justify-center text-gray-400 hover:text-[#0A66C2] hover:scale-105 transition ease-in-out"
+              className="flex items-center justify-center text-gray-600 dark:text-gray-400  hover:text-[#0A66C2] hover:scale-105 transition ease-in-out"
             >
               <FaLinkedin size={20} />
             </a>
