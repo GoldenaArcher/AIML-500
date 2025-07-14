@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   output: "export",
   basePath: isProd ? "/AIML-500" : "",
   assetPrefix: isProd ? "/AIML-500/" : "",
-  images: { unoptimized: true },
+  images: { unoptimized: true }
 };
 
 export default nextConfig;

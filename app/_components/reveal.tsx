@@ -1,4 +1,3 @@
-/* app/components/Reveal.tsx */
 "use client";
 import { useRef, useEffect } from "react";
 import clsx from "clsx";
