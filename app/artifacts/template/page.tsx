@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+    title: 'Template Artifact Page',
+    description: 'A template for creating artifact pages in the AI course.'
+};
 
 const TemplatePage = () => {
     return (

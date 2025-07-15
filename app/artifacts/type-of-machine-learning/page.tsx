@@ -1,5 +1,12 @@
 import React from 'react';
-import Markdown from "@/app/artifacts/type-of-machine-learning/_components/markdown";
+
+import { Metadata } from 'next';
+import Markdown from './_components/markdown';
+
+export const metadata: Metadata = {
+    title: 'Types of Machine Learning',
+    description: 'An overview of the three main types of machine learning: supervised, unsupervised, and reinforcement learning.'
+};
 
 function TypeOfMLPage() {
     return (
