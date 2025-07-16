@@ -1,4 +1,4 @@
-import MermaidWrapper from '@/app/_components/mermaidWrapper';
+import MermaidWrapper from '@/app/_components/mermaid-wrapper';
 import React from 'react';
 
 const timelineDiagram =

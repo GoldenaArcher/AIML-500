@@ -1,6 +1,6 @@
 import React from 'react';
-import MarkdownSection from './_components/markdownSection';
-import TimelineDetailsSection from './_components/timelineDetailsSection';
+import MarkdownSection from './_components/markdown-section';
+import TimelineDetailsSection from './_components/timeline-details-section';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

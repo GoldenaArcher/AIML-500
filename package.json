@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@lightenna/react-mermaid-diagram": "^1.0.21",
+    "@tanstack/react-table": "^8.21.3",
     "clsx": "^2.1.1",
     "mermaid": "^11.8.1",
     "next": "15.3.4",

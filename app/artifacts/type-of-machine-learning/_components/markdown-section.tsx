@@ -1,5 +1,5 @@
 import React from 'react';
-import MermaidWrapper from "@/app/_components/mermaidWrapper";
+import MermaidWrapper from "@/app/_components/mermaid-wrapper";
 
 const markdownContent = `
 graph TD
@@ -25,9 +25,12 @@ graph TD
 
 function Markdown() {
     return (
-        <MermaidWrapper>
-            {markdownContent}
-        </MermaidWrapper>
+        <div className="flex-1 mb-12">
+            <h3 className='text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2'>Visual Taxonomy</h3>
+            <MermaidWrapper>
+                {markdownContent}
+            </MermaidWrapper>
+        </div>
     );
 }
 

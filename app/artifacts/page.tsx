@@ -1,14 +1,14 @@
 import React from "react";
 import Link from "next/link";
-import {artifactMeta} from "@/app/_data/artifactMeta";
+import {artifactMeta} from "@/app/_data/artifact-meta";
 
 const page = () => {
     return (
-        <main className="mx-auto max-w-5xl px-8 py-16">
+        <main className="mx-auto max-w-7xl px-8 py-16">
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">
                 Artifacts
             </h1>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {artifactMeta.map(({ slug, title, description }) => (
                     <li key={slug}>
                         <Link
