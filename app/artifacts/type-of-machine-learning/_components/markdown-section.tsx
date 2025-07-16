@@ -16,11 +16,11 @@ graph TD
   SL --> Classification
 
   USL --> Clustering
-  USL --> DimensionalityReduction
-  USL --> AnomalyDetection
-  USL --> AssociationLearning
+  USL --> DR[Dimensionality Reduction]
+  USL --> AD[Anomaly Detection]
+  USL --> AL[Association Learning]
 
-  RL --> NoTypicalSubtypes
+  RL --> NTS[No Typical Subtypes]
 `
 
 function Markdown() {

@@ -3,6 +3,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Markdown from './_components/markdown-section';
 import StepComparison from './_components/step-comparison';
+import BasicComparison from './_components/basic-comparison';
 
 export const metadata: Metadata = {
     title: 'Types of Machine Learning',
@@ -49,7 +50,7 @@ function TypeOfMLPage() {
                     <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
                         <li>Research and review foundational literature on machine learning types.</li>
                         <li>Extract key definitions and examples from the resource (Types of Machine Learning PDF).</li>
-                        <li>Visualize the differences using a structured flowchart.</li>
+                        <li>Visualize the categories and differences using a structured flowchart and table.</li>
                         <li>Integrate graphical illustrations.</li>
                         <li>Organize the artifact into clearly labeled educational sections.</li>
                     </ul>
@@ -89,6 +90,7 @@ function TypeOfMLPage() {
                     </h2>
                     <div className='flex flex-col space-y-4'>
                         <Markdown />
+                        <BasicComparison />
                         <StepComparison />
                     </div>
                 </section>
