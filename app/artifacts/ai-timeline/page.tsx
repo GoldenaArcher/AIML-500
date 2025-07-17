@@ -2,6 +2,7 @@ import React from 'react';
 import MarkdownSection from './_components/markdown-section';
 import TimelineDetailsSection from './_components/timeline-details-section';
 import { Metadata } from 'next';
+import TimelineReflection from './_components/timeline-reflection';
 
 export const metadata: Metadata = {
     title: 'AI Timeline',
@@ -90,7 +91,10 @@ const AITimelinePage = () => {
                         Final Artifact
                     </h2>
                     <div className='flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0'>
-                        <TimelineDetailsSection />
+                        <div className="flex flex-col flex-1">
+                            <TimelineDetailsSection />
+                            <TimelineReflection />
+                        </div>
                         <MarkdownSection />
                     </div>
                 </section>

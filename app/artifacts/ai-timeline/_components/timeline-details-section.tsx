@@ -2,7 +2,7 @@ import React from 'react';
 
 function TimelineDetailsSection() {
     return (
-        <div className='flex-1'>
+        <div className='mb-12'>
             <h3 className='text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2'>Timeline Details</h3>
             <div className='flex flex-col'>
                 {/* Chun Kit Kwong */}
