@@ -5,6 +5,7 @@ import Markdown from './_components/markdown-section';
 import StepComparison from './_components/step-comparison';
 import BasicComparison from './_components/basic-comparison';
 import TypeOfMlReflection from './_components/type-of-ml-reflection';
+import MachineLearningTypes from './_components/machine-learning-types';
 
 export const metadata: Metadata = {
     title: 'Types of Machine Learning',
@@ -94,6 +95,9 @@ function TypeOfMLPage() {
                         <BasicComparison />
                         <StepComparison />
                         <TypeOfMlReflection />
+
+                        <hr />
+                        <MachineLearningTypes />
                     </div>
                 </section>
             </article>

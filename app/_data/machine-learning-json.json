@@ -1,0 +1,172 @@
+{
+    "name": "type of Machine Learning",
+    "children": [
+        {
+            "name": "Supervised Learning",
+            "children": [
+                {
+                    "name": "Characteristics",
+                    "children": [
+                        {
+                            "name": "Labelled Data",
+                            "value": 1
+                        },
+                        {
+                            "name": "Predict Output",
+                            "value": 1
+                        },
+                        {
+                            "name": "Input-Output Pairs",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Examples",
+                    "children": [
+                        {
+                            "name": "Classification",
+                            "children":[
+                                {
+                                    "name": "Binary Classification",
+                                    "value": 1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Regression",
+                            "children": [
+                                {
+                                    "name": "Price Prediction",
+                                    "value": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Algorithms",
+                    "children": [
+                        {
+                            "name": "Decision Trees",
+                            "value": 1
+                        },
+                        {
+                            "name": "Linear Regression",
+                            "value": 1
+                        },
+                        {
+                            "name": "Random Forests",
+                            "value": 1
+                        },
+                        {
+                            "name": "Support Vector Machines",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Workflow",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Unsupervised Learning",
+            "children": [
+                {
+                    "name": "Characteristics",
+                    "children": [
+                        {
+                            "name": "Unlabelled Data",
+                            "value": 1
+                        },
+                        {
+                            "name": "Discover Patterns",
+                            "value": 1
+                        },
+                        {
+                            "name": "Group Similar Data",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Examples",
+                    "children": [
+                        {
+                            "name": "Clustering",
+                            "children": [
+                                {
+                                    "name": "Customer Segmentation",
+                                    "value": 1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Association",
+                            "children": [
+                                {
+                                    "name": "Market Basket Analysis",
+                                    "value": 1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Dimensionality Reduction",
+                            "children": [
+                                {
+                                    "name": "Feature Extraction",
+                                    "value": 1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Anomaly Detection",
+                            "children": [
+                                {
+                                    "name": "Fraud Detection",
+                                    "value": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Algorithms",
+                    "children": [
+                        {
+                            "name": "K-Means Clustering",
+                            "value": 1
+                        },
+                        {
+                            "name": "Hierarchical Clustering",
+                            "value": 1
+                        },
+                        {
+                            "name": "Principal Component Analysis (PCA)",
+                            "value": 1
+                        },
+                        {
+                            "name": "Isolation Forest",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Workflow",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Reinforcement Learning",
+            "children": [
+                {
+                    "name": "Characteristics",
+                    "value": 1
+                }
+            ]
+        }
+    ]
+}
