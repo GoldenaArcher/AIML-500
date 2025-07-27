@@ -13,7 +13,7 @@ const page = () => {
                     <li key={slug}>
                         <Link
                             href={`/artifacts/${slug}`}
-                            className="block p-6 bg-white dark:bg-neutral-800 rounded-xl shadow hover:shadow-lg transition duration-200 hover:bg-neutral-100 dark:hover:bg-neutral-700"
+                            className="block p-6 bg-white dark:bg-neutral-800 rounded-xl shadow hover:shadow-lg transition duration-200 hover:bg-neutral-100 dark:hover:bg-neutral-700 min-h-[125px]"
                         >
                             <h2 className="text-xl font-semibold text-gray-800 dark:text-white">
                                 {title}
