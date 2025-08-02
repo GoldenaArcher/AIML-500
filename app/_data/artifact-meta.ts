@@ -18,5 +18,10 @@ export const artifactMeta = [
         slug: "effective-communication-in-collaborative-learning",
         title: "Effective Communicationg",
         description: "Strategies for enhancing communication in collaborative learning environments.",
+    },
+    {
+        slug: "data-challenges",
+        title: "Data Challenges",
+        description: "Exploring common challenges in data analysis and trainingz.",
     }
 ];

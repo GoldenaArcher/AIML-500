@@ -1,5 +1,12 @@
 import React from 'react'
+import { Metadata } from 'next';
 import NeuralNetwork from './_components/neural-network'
+
+
+export const metaData: Metadata = {
+  title: 'Effective Communication in Collaborative Learning',
+  description: 'An artifact demonstrating effective communication strategies applied to explain neural networks in deep learning.'
+}
 
 const EffectiveCommunicationPage = () => {
   return (
@@ -61,22 +68,22 @@ const EffectiveCommunicationPage = () => {
               <strong>Discussion:</strong>
               <p className="ml-4">
                 Identifying the target audience guided the tone, structure, and depth of explanation. Since the content was intended for a general audience, technical jargon was minimized, and conceptual clarity was prioritized over disciplinary precision.
-                </p>
+              </p>
             </li>
             <li>
-              <strong>Drafting:</strong> 
+              <strong>Drafting:</strong>
               <p className="ml-4">
                 Relevant background information was gathered from credible sources to ensure conceptual accuracy. The simplification of complex ideas was carried out carefully to avoid distortion or bias.
               </p>
             </li>
             <li>
-              <strong>Feedback:</strong> 
+              <strong>Feedback:</strong>
               <p className="ml-4">
                 Visual aids — such as simplified diagrams and layered structures — were integrated to complement textual explanations and enhance understanding through dual coding.
               </p>
             </li>
             <li>
-              <strong>Finalization:</strong> 
+              <strong>Finalization:</strong>
               <p className="ml-4">
                 The textual and visual elements were assembled into a coherent, accessible format. Emphasis was placed on clarity, information hierarchy, and visual readability to maximize cognitive uptake.
               </p>
