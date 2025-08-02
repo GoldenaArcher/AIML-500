@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import NeuralNetwork from './_components/neural-network'
 
 
-export const metaData: Metadata = {
+export const metadata: Metadata = {
   title: 'Effective Communication in Collaborative Learning',
   description: 'An artifact demonstrating effective communication strategies applied to explain neural networks in deep learning.'
 }
