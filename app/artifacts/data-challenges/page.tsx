@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import React from 'react'
+import ChallengesDetails from './_components/challenges-details'
 
 /**
  * 
@@ -303,6 +304,96 @@ const dataChallengesPage = () => {
                     <p className="text-gray-600 dark:text-gray-400">
                         This structure allows practitioners, researchers, and students to systematically evaluate data issues and apply informed solutions in real-world projects.
                     </p>
+                </section>
+                <section className="mb-8">
+                    <h2 className='text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4'>
+                        Objective
+                    </h2>
+                    <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
+                        <li>
+
+                            To identify and structure the key data-related challenges across the AI/data pipeline.
+                        </li>
+                        <li>
+
+                            To provide a layered framework that facilitates in-depth analysis and mitigation strategies for each issue.
+                        </li>
+                        <li>
+
+                            To enhance awareness of how each challenge affects downstream processes like modeling, deployment, and ethical AI practices.
+                        </li>
+                    </ul>
+                </section>
+                <section className='mb-8'>
+                    <h2 className='text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4'>
+                        Process
+                    </h2>
+                    <ol className="list-decimal list-inside text-gray-600 dark:text-gray-400 space-y-2">
+                        <li>
+                            <strong>Topic Identification:</strong>
+                            <span className='ml-2'>
+                                Selected 14 high-impact areas derived from coursework and industry cases.
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Structural Design:</strong>
+                            <span className='ml-2'>
+                                Organized challenges into a branching format with four levels
+                            </span>
+                            <br />
+                            <span className='ml-4'>Top-Level Category → Subdomain → Challenge & Impact → Solutions.</span>
+                        </li>
+                        <li>
+                            <strong>Synthesis: </strong>
+                            <span className='ml-2'>
+                                Mapped common problems, observed implications, and state-of-the-art mitigation approaches.
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Iterative Review:</strong>
+                            <span className='ml-2'>
+                                Balanced tree depth and node breadth to ensure clarity and navigation efficiency.
+                            </span>
+                        </li>
+                    </ol>
+                </section>
+                <section className="mb-8">
+                    <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+                        Tools/Technologies Used
+                    </h2>
+                    <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
+                        <li>
+                            <strong>Google Search</strong>
+                        </li>
+                        <li>
+                            <strong>Course Material</strong>
+                        </li>
+                        <li>
+                            <strong>VS Code</strong>
+                        </li>
+                        <li>
+                            <strong>ChatGPT</strong>
+                        </li>
+                    </ul>
+                </section>
+                <section className="mb-8">
+                    <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+                        Value Proposition
+                    </h2>
+                    <p className="text-gray-600 dark:text-gray-400 mb-4">
+                        This artifact organizes 14 complex data challenges into a balanced, four-tiered knowledge tree. It enables interactive exploration of causes, impacts, and solutions, offering a reusable, extensible structure for understanding real-world data risks.
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-400">
+                        The content reflects key course themes such as data quality, privacy, bias, and annotation. It demonstrates the ability to translate theoretical concerns into structured, actionable insights aligned with course materials.
+                    </p>
+                </section>
+                <section>
+                    <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+                        Final Artifact
+                    </h2>
+                    <div className='flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0'>
+                        <ChallengesDetails />
+                    </div>
                 </section>
             </article>
         </div>

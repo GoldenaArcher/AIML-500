@@ -1,0 +1,24 @@
+{
+    "name": "Availability",
+    "children": [
+        {
+            "name": "Data Challenges",
+            "children": [
+                {
+                    "name": "Rule",
+                    "children": [
+                        {
+                            "name": "Challenge: Missing data entries"
+                        },
+                        {
+                            "name": "Impact: Downstream pipeline failure"
+                        },
+                        {
+                            "name": "Possible Solution: Introduce data checkpoints"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

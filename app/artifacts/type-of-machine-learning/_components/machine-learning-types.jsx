@@ -2,7 +2,7 @@
 
 import * as d3 from 'd3';
 import { useEffect, useRef } from 'react';
-import data from '@/app/_data/machine-learning-json.json';
+import data from '@/app/_data/machine-learning.json';
 
 export default function MachineLearningTypes() {
     const ref = useRef(null);
