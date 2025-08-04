@@ -14,13 +14,20 @@ export default function ChallengesDetails() {
     const tree = d3.tree().nodeSize([dx, dy]);
     const diagonal = d3.linkHorizontal().x((d) => d.y).y((d) => d.x);
 
+    const width = root.height * dy + 200; // root.height 是最大深度
+    const height = root.descendants().length * dx;
+
+
     const svg = d3
       .select(ref.current)
       .append("svg")
-      .attr("width", 800)
-      .attr("height", 300)
-      .attr("viewBox", [-40, -10, 800, 300])
-      .attr("style", "max-width: 100%; font: 10px sans-serif;");
+      .attr("width", width)
+      .attr("height", height)
+      .call(
+        d3.zoom().on("zoom", (event) => {
+          g.attr("transform", event.transform); // <-- 绑定 zoom 拖拽缩放
+        })
+      );
 
     const g = svg.append("g");
     const gLink = g.append("g").attr("fill", "none").attr("stroke", "#555");

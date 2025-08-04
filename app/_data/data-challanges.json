@@ -1,24 +1,392 @@
 {
-    "name": "Availability",
-    "children": [
+  "name": "Data Challenges",
+  "children": [
+    {
+      "name": "Availability & Quality",
+      "children": [
         {
-            "name": "Data Challenges",
-            "children": [
-                {
-                    "name": "Rule",
-                    "children": [
-                        {
-                            "name": "Challenge: Missing data entries"
-                        },
-                        {
-                            "name": "Impact: Downstream pipeline failure"
-                        },
-                        {
-                            "name": "Possible Solution: Introduce data checkpoints"
-                        }
-                    ]
-                }
-            ]
+          "name": "Data Availability",
+          "children": [
+            {
+              "name": "Challenge: Data from niche domains or novel applications is often scarce."
+            },
+            {
+              "name": "Challenge: Privacy concerns or regulation (e.g., medical, finance) may limit access."
+            },
+            {
+              "name": "Challenge: Siloed data across departments or organizations prevents sharing."
+            },
+            {
+              "name": "Impact: Underrepresentation of rare scenarios leads to biased or overfitted models."
+            },
+            {
+              "name": "Impact: Limited data hampers model robustness and generalization."
+            },
+            {
+              "name": "Solution: Apply data augmentation or synthetic data generation."
+            },
+            {
+              "name": "Solution: Use transfer learning or pre-trained models to bootstrap performance."
+            },
+            {
+              "name": "Solution: Establish cross-team or inter-org data sharing agreements."
+            }
+          ]
+        },
+        {
+          "name": "Data Quality",
+          "children": [
+            {
+              "name": "Challenge: Data may be incomplete, inaccurate, inconsistent, or noisy."
+            },
+            {
+              "name": "Challenge: Manual data entry or extraction errors degrade data integrity."
+            },
+            {
+              "name": "Impact: Poor data leads to incorrect or biased model predictions."
+            },
+            {
+              "name": "Impact: Model performance degrades due to noisy or low-quality inputs."
+            },
+            {
+              "name": "Solution: Implement strict validation and cleaning pipelines."
+            },
+            {
+              "name": "Solution: Automate data collection and error correction mechanisms."
+            },
+            {
+              "name": "Solution: Use anomaly detection to flag suspicious entries."
+            }
+          ]
+        },
+        {
+          "name": "Data Annotation Quality",
+          "children": [
+            {
+              "name": "Challenge: Crowdsourced or poorly managed annotations vary in consistency."
+            },
+            {
+              "name": "Challenge: Low-quality labels mislead model training."
+            },
+            {
+              "name": "Impact: Higher model error rates and reduced trustworthiness."
+            },
+            {
+              "name": "Impact: Increased QA and re-labeling efforts."
+            },
+            {
+              "name": "Solution: Use inter-rater agreement metrics to validate annotations."
+            },
+            {
+              "name": "Solution: Introduce gold-standard samples to benchmark workers."
+            },
+            {
+              "name": "Solution: Train annotators and apply spot-checks or audits."
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "name": "Labeling & Annotation",
+      "children": [
+        {
+          "name": "Data Labeling",
+          "children": [
+            {
+              "name": "Challenge: Labeling is time-consuming, expensive, and error-prone."
+            },
+            {
+              "name": "Challenge: Supervised learning requires large volumes of labeled data."
+            },
+            {
+              "name": "Impact: Inaccurate or insufficient labels severely hurt model accuracy."
+            },
+            {
+              "name": "Impact: Label noise can confuse models during training."
+            },
+            {
+              "name": "Solution: Use semi-supervised or weakly supervised learning methods."
+            },
+            {
+              "name": "Solution: Crowdsource labeling with quality control mechanisms."
+            },
+            {
+              "name": "Solution: Adopt active learning to prioritize uncertain samples."
+            }
+          ]
+        },
+        {
+          "name": "Annotation Costs",
+          "children": [
+            {
+              "name": "Challenge: Manual annotation for vision/NLP is expensive."
+            },
+            {
+              "name": "Challenge: Expert-labeled data (e.g., medical) is especially costly."
+            },
+            {
+              "name": "Impact: Annotation costs slow down model deployment."
+            },
+            {
+              "name": "Impact: Budget constraints reduce dataset diversity."
+            },
+            {
+              "name": "Solution: Use pre-trained models to reduce labeling needs."
+            },
+            {
+              "name": "Solution: Label only informative samples with active learning."
+            },
+            {
+              "name": "Solution: Apply weak supervision techniques."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Governance & Evolution",
+      "children": [
+        {
+          "name": "Data Privacy & Security",
+          "children": [
+            {
+              "name": "Challenge: ML data often includes sensitive or personal information."
+            },
+            {
+              "name": "Challenge: Compliance with laws like GDPR and HIPAA is mandatory."
+            },
+            {
+              "name": "Impact: Privacy rules limit data access and increase management complexity."
+            },
+            {
+              "name": "Impact: Security breaches can result in data leaks and regulatory penalties."
+            },
+            {
+              "name": "Solution: Use differential privacy or federated learning techniques."
+            },
+            {
+              "name": "Solution: Encrypt data at rest and in transit."
+            },
+            {
+              "name": "Solution: Enforce role-based access control (RBAC)."
+            }
+          ]
+        },
+        {
+          "name": "Data Scalability",
+          "children": [
+            {
+              "name": "Challenge: Large datasets are hard to store and process efficiently."
+            },
+            {
+              "name": "Challenge: Training on massive data requires distributed systems."
+            },
+            {
+              "name": "Impact: Increased compute cost and latency."
+            },
+            {
+              "name": "Impact: Infrastructure complexity slows down model iteration."
+            },
+            {
+              "name": "Solution: Leverage cloud computing and distributed storage (e.g., Spark, Hadoop)."
+            },
+            {
+              "name": "Solution: Apply data sharding and partitioning strategies."
+            },
+            {
+              "name": "Solution: Optimize pipelines with batching and streaming."
+            }
+          ]
+        },
+        {
+          "name": "Data Versioning",
+          "children": [
+            {
+              "name": "Challenge: Tracking changes in datasets over time is complex."
+            },
+            {
+              "name": "Challenge: Inconsistent versions between dev and prod can cause issues."
+            },
+            {
+              "name": "Impact: Reduced reproducibility and traceability."
+            },
+            {
+              "name": "Impact: Model drift and training-validation mismatches."
+            },
+            {
+              "name": "Solution: Use data versioning tools (e.g., DVC, LakeFS)."
+            },
+            {
+              "name": "Solution: Log data hashes and metadata with each model artifact."
+            },
+            {
+              "name": "Solution: Automate dataset change detection in CI/CD."
+            }
+          ]
+        },
+        {
+          "name": "Data Drift",
+          "children": [
+            {
+              "name": "Challenge: Over time, input data distributions can shift."
+            },
+            {
+              "name": "Challenge: Drift may go unnoticed in dynamic environments."
+            },
+            {
+              "name": "Impact: Model performance degrades in production."
+            },
+            {
+              "name": "Impact: Predictions become unreliable as real-world context evolves."
+            },
+            {
+              "name": "Solution: Monitor data with drift detection tools (e.g., Evidently, NannyML)."
+            },
+            {
+              "name": "Solution: Periodically retrain models on new data."
+            },
+            {
+              "name": "Solution: Use online learning where appropriate."
+            }
+          ]
+        },
+        {
+          "name": "Data Bias",
+          "children": [
+            {
+              "name": "Challenge: Historical bias or collection bias can skew training data."
+            },
+            {
+              "name": "Challenge: Minority groups or rare events are often underrepresented."
+            },
+            {
+              "name": "Impact: Unfair or unethical model decisions (e.g., hiring, lending)."
+            },
+            {
+              "name": "Impact: Reputational risk and regulatory scrutiny."
+            },
+            {
+              "name": "Solution: Apply fairness-aware training algorithms."
+            },
+            {
+              "name": "Solution: Evaluate models using demographic or group-wise metrics."
+            },
+            {
+              "name": "Solution: Balance datasets or use debiasing preprocessing."
+            }
+          ]
+        },
+        {
+          "name": "Data Imbalance",
+          "children": [
+            {
+              "name": "Challenge: Some classes are heavily overrepresented compared to others."
+            },
+            {
+              "name": "Challenge: Skewed distribution leads to model bias toward majority classes."
+            },
+            {
+              "name": "Impact: Poor performance on minority classes."
+            },
+            {
+              "name": "Impact: Inflated accuracy due to ignoring rare but important outcomes."
+            },
+            {
+              "name": "Solution: Use resampling techniques (over/under sampling)."
+            },
+            {
+              "name": "Solution: Assign class-weighted loss functions."
+            },
+            {
+              "name": "Solution: Generate synthetic samples using SMOTE or similar tools."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Integration & Runtime",
+      "children": [
+        {
+          "name": "Data Integration",
+          "children": [
+            {
+              "name": "Challenge: ML often requires combining data from varied sources."
+            },
+            {
+              "name": "Challenge: Merging disparate formats and schemas is non-trivial."
+            },
+            {
+              "name": "Impact: Inconsistent inputs reduce model reliability and performance."
+            },
+            {
+              "name": "Impact: Data fusion errors can cascade into training defects."
+            },
+            {
+              "name": "Solution: Standardize schemas and use middleware or ETL tools."
+            },
+            {
+              "name": "Solution: Validate data after merging for consistency."
+            },
+            {
+              "name": "Solution: Use feature stores for unified access."
+            }
+          ]
+        },
+        {
+          "name": "Real-Time Data Processing",
+          "children": [
+            {
+              "name": "Challenge: Some ML use cases require real-time inputs."
+            },
+            {
+              "name": "Challenge: Efficient streaming and latency guarantees are hard to implement."
+            },
+            {
+              "name": "Impact: Models trained on batch data struggle in real-time scenarios."
+            },
+            {
+              "name": "Impact: Slow pipelines undermine time-sensitive applications."
+            },
+            {
+              "name": "Solution: Use streaming platforms like Apache Kafka or Flink."
+            },
+            {
+              "name": "Solution: Build lightweight, fast inference pipelines."
+            },
+            {
+              "name": "Solution: Train models with time-series and online updates in mind."
+            }
+          ]
+        },
+        {
+          "name": "Data Interoperability",
+          "children": [
+            {
+              "name": "Challenge: Different sources use incompatible formats and semantics."
+            },
+            {
+              "name": "Challenge: Reconciliation requires significant preprocessing."
+            },
+            {
+              "name": "Impact: Delays in data ingestion and model deployment."
+            },
+            {
+              "name": "Impact: Error-prone conversions reduce data utility."
+            },
+            {
+              "name": "Solution: Adopt standard schemas and metadata (e.g., JSON Schema, Avro)."
+            },
+            {
+              "name": "Solution: Use data cataloging and governance tools."
+            },
+            {
+              "name": "Solution: Define API contracts for cross-system data exchange."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
