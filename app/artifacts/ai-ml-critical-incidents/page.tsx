@@ -1,4 +1,5 @@
 import React from 'react'
+import UberIncidentComponent from './_components/uber-incidents'
 
 const AIMLCriticalIncidentsPage = () => {
     return (
@@ -113,13 +114,26 @@ const AIMLCriticalIncidentsPage = () => {
                         <li>
                             <strong>Course Materials</strong>
                         </li>
-                        
+                        <li>
+                            Collision Between Vehicle Controlled by Developmental Automated Driving System and Pedestrian, Tempe, Arizona, March 18, 2018. National Transportation Safety Board (NTSB), Report HAR1903. Retrieved from: https://www.ntsb.gov/investigations/AccidentReports/Reports/HAR1903.pdf
+
+                        </li>
+                        <li>
+                            Factual Report of Investigation – Tesla Model X Collision, Vehical and Survival Factors Factual Report, Mountain View, CA, HWY18FH011. National Transportation Safety Board (NTSB).
+
+                        </li>
+                        <li>
+                            Collision Between a Sport Utility Vehicle Operating With Partial Driving Automation and a Crash Attenuator. National Transportation Safety Board (NTSB).
+                        </li>
                     </ul>
                 </section>
                 <section>
                     <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
                         Final Artifact
                     </h2>
+                    <section>
+                        <UberIncidentComponent />
+                    </section>
                 </section>
             </article>
         </main>
