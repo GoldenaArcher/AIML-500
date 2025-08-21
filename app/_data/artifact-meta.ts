@@ -23,5 +23,10 @@ export const artifactMeta = [
         slug: "data-challenges",
         title: "Data Challenges",
         description: "Exploring common challenges in data analysis and trainingz.",
+    },
+    {
+        slug: "ai-ml-critical-incidents",
+        title: "AI/ML Critical Incidents",
+        description: "An exploration of significant real-world AI and Machine Learning incidents.",
     }
 ];
