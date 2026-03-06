@@ -1,17 +1,24 @@
 import Link from "next/link";
 import { aiml500Artifacts } from "@/app/_data/aiml-500-artifacts";
+import { aiml501Artifacts } from "@/app/_data/aiml-501-artifacts";
+import { courseConfigs } from "@/app/_data/course-config";
 
 export default function ArtifactsHubPage() {
-  const artifacts = aiml500Artifacts.map((artifact) => ({
-    ...artifact,
-    courseLabel: "AIML-500",
-    href: `/aiml-500/artifacts/${artifact.slug}`,
-  }));
+  const artifacts = [...aiml501Artifacts, ...aiml500Artifacts].map((artifact) => {
+    const courseLabel = courseConfigs[artifact.courseId].label;
+    return {
+      ...artifact,
+      courseLabel,
+      href: `/artifacts/${artifact.slug}?from=${artifact.courseId}`,
+    };
+  });
 
   return (
     <main className="mx-auto max-w-7xl px-8 py-16">
       <h1 className="text-4xl font-bold text-gray-900 dark:text-white">Artifacts</h1>
-      <p className="mt-3 text-gray-600 dark:text-gray-300">Browse AIML-500 artifacts.</p>
+      <p className="mt-3 text-gray-600 dark:text-gray-300">
+        Browse AIML-500 and AIML-501 artifacts.
+      </p>
 
       <ul className="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {artifacts.map(({ slug, title, description, href, courseLabel }) => (

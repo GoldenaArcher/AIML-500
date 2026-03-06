@@ -6,8 +6,17 @@ export const courseConfigs: Record<CourseConfig["id"], CourseConfig> = {
     label: "AIML-500",
     title: "AIML-500 Professional Portfolio",
     description: "Artifacts and coursework from AIML-500.",
-    bio: "With 9 years of professional experience across enterprise and startup environments, I specialize in scalable frontend and backend systems while expanding applied AI/ML skills.",
+    bio: "With 10 years of professional experience across enterprise and startup environments, I specialize in scalable frontend and backend systems while expanding applied AI/ML skills.",
     valueProposition:
       "I bridge software engineering rigor with AI learning outcomes, turning complex topics into practical, reusable artifacts.",
+  },
+  "aiml-501": {
+    id: "aiml-501",
+    label: "AIML-501",
+    title: "AIML-501 Professional Portfolio",
+    description: "Artifacts and coursework from AIML-501.",
+    bio: "I apply software engineering discipline and AI literacy to produce explainable, reusable learning artifacts for real-world ML decision-making.",
+    valueProposition:
+      "I translate complex AI/ML concepts into structured frameworks that help stakeholders choose practical, responsible solutions faster.",
   },
 };

@@ -2,6 +2,7 @@ import { ArtifactEntry } from "./portfolio-types";
 
 export const aiml500Artifacts: ArtifactEntry[] = [
   {
+    courseId: "aiml-500",
     slug: "ai-timeline",
     title: "AI Timeline",
     description: "A historical overview of key AI milestones.",
@@ -24,6 +25,7 @@ export const aiml500Artifacts: ArtifactEntry[] = [
     references: ["Course materials", "Public historical AI references"],
   },
   {
+    courseId: "aiml-500",
     slug: "type-of-machine-learning",
     title: "Types of Machine Learning",
     description: "An overview of supervised, unsupervised, and reinforcement learning.",
@@ -46,6 +48,7 @@ export const aiml500Artifacts: ArtifactEntry[] = [
     references: ["Types of Machine Learning PDF", "Course materials"],
   },
   {
+    courseId: "aiml-500",
     slug: "effective-communication-in-collaborative-learning",
     title: "Effective Communication in Collaborative Learning",
     description: "A communication-focused artifact for explaining neural networks.",
@@ -68,6 +71,7 @@ export const aiml500Artifacts: ArtifactEntry[] = [
     references: ["Course materials"],
   },
   {
+    courseId: "aiml-500",
     slug: "data-challenges",
     title: "Data Challenges",
     description: "A structured map of common AI/ML data challenges and mitigations.",
@@ -90,6 +94,7 @@ export const aiml500Artifacts: ArtifactEntry[] = [
     references: ["Course materials"],
   },
   {
+    courseId: "aiml-500",
     slug: "ai-ml-critical-incidents",
     title: "AI/ML Critical Incidents",
     description: "A case analysis of high-profile AI-assisted driving failures.",
