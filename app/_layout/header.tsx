@@ -6,7 +6,8 @@ import { useState } from "react";
 export default function Header() {
   const [open, setOpen] = useState(false);
 
-  const toggle = () => setOpen(!open);
+  const toggle = () => setOpen((prev) => !prev);
+  const closeMenu = () => setOpen(false);
 
   return (
     <header
@@ -17,24 +18,20 @@ export default function Header() {
         bg-[var(--color-background)] text-[var(--color-foreground)]
       "
     >
-      {/* Logo */}
       <Link href="/" className="text-xl font-bold">
-        AIML&nbsp;500
+        AIML Portfolio
       </Link>
 
-      {/* Desktop Nav */}
-      <nav className="hidden md:flex space-x-4">
+      <nav className="hidden md:flex items-center gap-1">
         <NavLink href="/">Home</NavLink>
         <NavLink href="/artifacts">Artifacts</NavLink>
       </nav>
 
-      {/* Hamburger (mobile) */}
       <button
         onClick={toggle}
         aria-label="Toggle menu"
         className="md:hidden flex flex-col justify-between w-6 h-4"
       >
-        {/* use transform + opacity for animation */}
         <span
           className={`
             block h-0.5 w-full bg-current transition-transform duration-300
@@ -55,7 +52,6 @@ export default function Header() {
         />
       </button>
 
-      {/* Slide-down mobile menu */}
       <div
         className={`
           md:hidden absolute left-0 right-0 top-full overflow-hidden
@@ -63,15 +59,15 @@ export default function Header() {
           transition-max-h duration-300 ease-in-out
           ${
             open
-              ? "max-h-40 border-b border-black/10 dark:border-white/10"
+              ? "max-h-80 border-b border-black/10 dark:border-white/10"
               : "max-h-0"
           }
         `}
       >
-        <MobileLink href="/" onClick={toggle}>
+        <MobileLink href="/" onClick={closeMenu}>
           Home
         </MobileLink>
-        <MobileLink href="/artifacts" onClick={toggle}>
+        <MobileLink href="/artifacts" onClick={closeMenu}>
           Artifacts
         </MobileLink>
       </div>
@@ -87,7 +83,10 @@ function NavLink({
   children: React.ReactNode;
 }) {
   return (
-    <Link href={href} className="hover:underline">
+    <Link
+      href={href}
+      className="inline-flex items-center rounded-md px-3 py-1.5 leading-none hover:bg-black/5 dark:hover:bg-white/10"
+    >
       {children}
     </Link>
   );

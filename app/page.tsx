@@ -1,54 +1,51 @@
 import Link from "next/link";
-import Reveal from "./_components/reveal";
+import Reveal from "@/app/_components/reveal";
 
 export default function Home() {
   return (
     <main className="mx-auto max-w-[1280px] px-8 py-16">
-      {/* Top: Intro */}
-      <Reveal effect="up" delay={"200"}>
-        <h1 className="text-3xl md:text-5xl font-bold">Hi, I'm&nbsp;Lu Han</h1>
+      <Reveal effect="up" delay="200">
+        <h1 className="text-3xl md:text-5xl font-bold">Hi, I&apos;m Lu Han</h1>
         <p className="mt-2 text-lg text-gray-600 dark:text-gray-300 max-w-[100%] sm:max-w-[720px]">
-          A software engineer passionate about full-stack development, AI and
-          scalable systems.
+          A software engineer passionate about full-stack development, AI, and scalable systems.
         </p>
       </Reveal>
 
-      {/* Left: Value Prop */}
-      <Reveal effect="left" delay={"400"}>
+      <Reveal effect="left" delay="400">
         <section className="mt-8 sm:mt-24">
-          <h2 className="text-2xl font-semibold">About Me</h2>
+          <h2 className="text-2xl font-semibold">Professional Bio</h2>
           <p className="mt-2 text-gray-700 dark:text-gray-300 max-w-[100%] sm:max-w-[720px]">
-            With 9 years of professional experience across enterprise and
-            startup environments, I specialize in building scalable frontends
-            with React and robust backend services with Node.js and Spring Boot.
-            I'm currently focused on creating AI-assisted tools and exploring
-            cloud-native architecture.
+            I am a software engineer with 10 years of experience delivering products in both
+            enterprise and startup environments. My core strengths are React frontend architecture,
+            Node.js and Spring Boot backend systems, and cross-functional execution from idea to
+            production. I am focused on strengthening applied AI/ML decision-making and producing
+            portfolio artifacts that demonstrate practical, job-ready impact.
           </p>
         </section>
       </Reveal>
 
-      {/* Right: Selected Work */}
-      <Reveal effect="right" delay={"600"}>
+      <Reveal effect="right" delay="600">
         <section className="mt-8 sm:mt-24">
-          <h2 className="text-2xl font-semibold">What I bring</h2>
+          <h2 className="text-2xl font-semibold">Personal Value Proposition</h2>
           <p className="mt-2 text-gray-700 dark:text-gray-300 max-w-[100%] sm:max-w-[720px]">
-            Bridging modern frontend experiences with robust backend
-            design &mdash; delivering products that scale and
-            delight.
+            I help product teams and technical stakeholders implement AI/ML solutions that are
+            reliable, explainable, and ready for production use. With 10 years of full-stack
+            engineering experience, I combine technical rigor with clear communication so decisions
+            are faster and execution is more consistent. My work reduces delivery risk and creates
+            reusable artifacts that improve outcomes across projects.
           </p>
         </section>
       </Reveal>
 
-      {/* Bottom: Professional Bio */}
-      <Reveal effect="down" delay={"800"}>
-        <section className="mt-8 sm:mt-24 mb:8 sm:mb-18">
-          <h2 className="text-2xl font-semibold">Selected Work</h2>
+      <Reveal effect="down" delay="800">
+        <section className="mt-8 sm:mt-24 mb-8 sm:mb-18">
+          <h2 className="text-2xl font-semibold">Artifacts</h2>
           <p className="mt-2 text-gray-700 dark:text-gray-300 max-w-[100%] sm:max-w-[720px]">
-            Visit the&nbsp;
+            Browse portfolio artifacts by course on the{" "}
             <Link href="/artifacts" className="underline hover:text-teal-500">
-              artifacts
+              artifacts page
             </Link>
-            &nbsp;page for detailed case studies.
+            .
           </p>
         </section>
       </Reveal>

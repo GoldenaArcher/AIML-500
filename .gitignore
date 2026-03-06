@@ -17,3 +17,13 @@ public/build
 
 # intellij config
 .idea
+
+# backup files and folders
+.next.backup.*
+*.backup
+*.backup.*
+*.bak
+*~
+
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo

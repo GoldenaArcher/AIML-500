@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AIML 500 Portfolio",
-  description: "The professional portfolio project for AIML 500.",
+  title: "AIML Professional Portfolio",
+  description: "Course portfolio for AIML artifacts.",
 };
 
 export default function RootLayout({
