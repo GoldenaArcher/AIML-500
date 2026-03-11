@@ -3,6 +3,35 @@ import { ArtifactEntry } from "./portfolio-types";
 export const aiml501Artifacts: ArtifactEntry[] = [
   {
     courseId: "aiml-501",
+    slug: "neural-network-components",
+    title: "Neural Network Components",
+    description:
+      "A visual explanation of neural network components using TensorFlow Playground experiments.",
+    introduction:
+      "This artifact explains core neural network components through a set of visual experiments that show how architecture and activation choices change model behavior.",
+    objective:
+      "Build a portfolio-ready visual presentation that explains neural network structure and connects theory to observed Playground results.",
+    process: [
+      "Ran multiple TensorFlow Playground experiments on the circle dataset.",
+      "Compared shallow and deep networks as well as different activation functions.",
+      "Captured screenshots that showed both weak and strong model behavior.",
+      "Mapped experiment results back to layers, neurons, weights, activation functions, loss, and optimization.",
+      "Organized the artifact into diagram, explanation, experiment, and summary sections.",
+    ],
+    tools: ["TensorFlow Playground", "Next.js", "React", "TypeScript", "Tailwind CSS", "VS Code"],
+    valueProposition:
+      "Makes neural network components easier to understand by pairing clear definitions with visible changes in training output.",
+    uniqueValue:
+      "Connects each component to an actual experiment instead of presenting neural network terminology as standalone theory.",
+    relevance:
+      "Useful for learners who need a practical and visual introduction to neural networks and classification behavior.",
+    references: [
+      "TensorFlow Playground",
+      "AIML-501 course instructions and rubric",
+    ],
+  },
+  {
+    courseId: "aiml-501",
     slug: "ml-algorithm-framework",
     title: "Machine Learning Algorithm Framework",
     description:

@@ -9,7 +9,7 @@ export default function ArtifactsHubPage() {
     return {
       ...artifact,
       courseLabel,
-      href: `/artifacts/${artifact.slug}?from=${artifact.courseId}`,
+      href: `/artifacts/${artifact.slug}`,
     };
   });
 

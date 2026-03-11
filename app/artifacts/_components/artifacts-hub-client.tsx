@@ -75,10 +75,14 @@ export default function ArtifactsHubClient({ artifacts }: ArtifactsHubClientProp
       </div>
 
       <ul className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {visibleArtifacts.map(({ slug, title, description, href, courseLabel }) => (
+        {visibleArtifacts.map(({ slug, title, description, href, courseId, courseLabel }) => {
+          const artifactHref =
+            activeFilter === "all" ? href : `${href}?from=${courseId}`;
+
+          return (
           <li key={`${courseLabel}-${slug}`}>
             <Link
-              href={href}
+              href={artifactHref}
               className="block h-full rounded-xl bg-white p-6 shadow transition duration-200 hover:bg-neutral-100 hover:shadow-lg dark:bg-neutral-800 dark:hover:bg-neutral-700"
             >
               <span className="inline-block rounded-full bg-black/5 px-2 py-1 text-xs font-medium text-gray-700 dark:bg-white/10 dark:text-gray-300">
@@ -88,7 +92,7 @@ export default function ArtifactsHubClient({ artifacts }: ArtifactsHubClientProp
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">{description}</p>
             </Link>
           </li>
-        ))}
+        )})}
       </ul>
     </>
   );
