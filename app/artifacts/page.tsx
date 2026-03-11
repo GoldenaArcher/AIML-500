@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { aiml500Artifacts } from "@/app/_data/aiml-500-artifacts";
 import { aiml501Artifacts } from "@/app/_data/aiml-501-artifacts";
 import { courseConfigs } from "@/app/_data/course-config";
@@ -19,7 +20,9 @@ export default function ArtifactsHubPage() {
       <p className="mt-3 text-gray-600 dark:text-gray-300">
         Browse AIML-500 and AIML-501 artifacts.
       </p>
-      <ArtifactsHubClient artifacts={artifacts} />
+      <Suspense fallback={null}>
+        <ArtifactsHubClient artifacts={artifacts} />
+      </Suspense>
     </main>
   );
 }
