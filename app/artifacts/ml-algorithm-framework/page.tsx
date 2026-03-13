@@ -193,16 +193,16 @@ export default function MLAlgorithmFrameworkPage() {
           </h2>
           <div className="grid gap-4 md:grid-cols-3">
             {groups.map((group) => (
-              <div key={group} className="rounded-xl border border-white/10 bg-white/5 p-4">
-                <h3 className="mb-3 text-lg font-semibold text-gray-100">{group}</h3>
+              <div key={group} className="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-white/10 dark:bg-white/5">
+                <h3 className="mb-3 text-lg font-semibold text-slate-900 dark:text-gray-100">{group}</h3>
                 <ul className="space-y-2">
                   {algorithms
                     .filter((item) => item.learningType === group)
                     .map((item) => (
-                      <li key={item.name} className="rounded-lg bg-white/5 p-3">
-                        <p className="font-medium text-gray-100">{item.name}</p>
-                        <p className="mt-1 text-sm text-gray-300">{item.useCase}</p>
-                        <p className="mt-1 text-xs text-gray-400">Sources: {item.sourceRefs.join(", ")}</p>
+                      <li key={item.name} className="rounded-lg border border-slate-200 bg-white p-3 dark:border-white/10 dark:bg-white/5">
+                        <p className="font-medium text-slate-900 dark:text-gray-100">{item.name}</p>
+                        <p className="mt-1 text-sm text-slate-600 dark:text-gray-300">{item.useCase}</p>
+                        <p className="mt-1 text-xs text-slate-500 dark:text-gray-400">Sources: {item.sourceRefs.join(", ")}</p>
                       </li>
                     ))}
                 </ul>
@@ -215,10 +215,10 @@ export default function MLAlgorithmFrameworkPage() {
           <h2 className="mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-200">
             Algorithm Classification Matrix
           </h2>
-          <div className="overflow-x-auto rounded-xl border border-white/10">
+          <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white dark:border-white/10 dark:bg-transparent">
             <table className="w-full min-w-[1100px] border-collapse">
-              <thead className="bg-white/10">
-                <tr className="text-left text-sm text-gray-200">
+              <thead className="bg-slate-100 dark:bg-white/10">
+                <tr className="text-left text-sm text-slate-700 dark:text-gray-200">
                   <th className="px-4 py-3">Algorithm</th>
                   <th className="px-4 py-3">Type</th>
                   <th className="px-4 py-3">Domains</th>
@@ -229,13 +229,13 @@ export default function MLAlgorithmFrameworkPage() {
               </thead>
               <tbody>
                 {algorithms.map((item) => (
-                  <tr key={item.name} className="border-t border-white/10 align-top text-sm">
-                    <td className="px-4 py-3 font-medium text-gray-100">{item.name}</td>
-                    <td className="px-4 py-3 text-gray-300">{item.learningType}</td>
-                    <td className="px-4 py-3 text-gray-300">{item.domains.join(", ")}</td>
-                    <td className="px-4 py-3 text-gray-300">{item.useCase}</td>
-                    <td className="px-4 py-3 text-gray-300">{item.explanation}</td>
-                    <td className="px-4 py-3 text-gray-300">{item.sourceRefs.join(", ")}</td>
+                  <tr key={item.name} className="border-t border-slate-200 align-top text-sm dark:border-white/10">
+                    <td className="px-4 py-3 font-medium text-slate-900 dark:text-gray-100">{item.name}</td>
+                    <td className="px-4 py-3 text-slate-700 dark:text-gray-300">{item.learningType}</td>
+                    <td className="px-4 py-3 text-slate-700 dark:text-gray-300">{item.domains.join(", ")}</td>
+                    <td className="px-4 py-3 text-slate-700 dark:text-gray-300">{item.useCase}</td>
+                    <td className="px-4 py-3 text-slate-700 dark:text-gray-300">{item.explanation}</td>
+                    <td className="px-4 py-3 text-slate-700 dark:text-gray-300">{item.sourceRefs.join(", ")}</td>
                   </tr>
                 ))}
               </tbody>

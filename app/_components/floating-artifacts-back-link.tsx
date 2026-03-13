@@ -31,7 +31,7 @@ export default function FloatingArtifactsBackLink() {
         type="button"
         onClick={scrollToTop}
         aria-label="Go back to top"
-        className="inline-flex items-center rounded-full border border-white/10 bg-black/75 p-3 text-white shadow-lg backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:border-white/30 hover:bg-black focus:outline-none focus:ring-2 focus:ring-white/30"
+        className="inline-flex items-center rounded-full border border-slate-200 bg-white/90 p-3 text-slate-700 shadow-lg backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/25 dark:border-white/10 dark:bg-black/75 dark:text-white dark:hover:border-white/30 dark:hover:bg-black dark:focus:ring-white/30"
       >
         <HiArrowUp aria-hidden="true" className="h-4 w-4" />
       </button>

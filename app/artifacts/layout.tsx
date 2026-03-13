@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import ArtifactBreadcrumb from "@/app/_components/artifact-breadcrumb";
+import ArtifactContextBar from "@/app/_components/artifact-context-bar";
 import FloatingArtifactsBackLink from "@/app/_components/floating-artifacts-back-link";
 
 export default function ArtifactsLayout({
@@ -10,7 +10,7 @@ export default function ArtifactsLayout({
   return (
     <>
       <Suspense fallback={null}>
-        <ArtifactBreadcrumb />
+        <ArtifactContextBar />
       </Suspense>
       <Suspense fallback={null}>
         <FloatingArtifactsBackLink />
