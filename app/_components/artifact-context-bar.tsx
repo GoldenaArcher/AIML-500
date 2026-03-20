@@ -26,19 +26,19 @@ export default function ArtifactContextBar() {
   return (
     <div className="sticky top-16 z-40">
       <div className="mx-auto max-w-[1280px] px-8 py-3">
-        <nav className="inline-flex min-w-0 items-center rounded-lg bg-white/45 px-3 py-1.5 text-[15px] text-slate-600 backdrop-blur-md dark:bg-black/25 dark:text-gray-400">
-          <Link href="/" className="hover:text-slate-900 hover:underline dark:hover:text-white">
+        <nav className="inline-flex min-w-0 items-center rounded-lg bg-white/70 px-3 py-1.5 text-[15px] text-slate-700 backdrop-blur-md dark:bg-black/25 dark:text-gray-400">
+          <Link href="/" className="hover:text-slate-950 hover:underline dark:hover:text-white">
             Home
           </Link>
-          <span className="mx-2 text-slate-400 dark:text-gray-500">/</span>
+          <span className="mx-2 text-slate-500 dark:text-gray-500">/</span>
           <Link
             href={artifactsHref}
-            className="hover:text-slate-900 hover:underline dark:hover:text-white"
+            className="hover:text-slate-950 hover:underline dark:hover:text-white"
           >
             Artifacts
           </Link>
-          <span className="mx-2 text-slate-400 dark:text-gray-500">/</span>
-          <span className="font-medium text-slate-900 dark:text-gray-100">{title}</span>
+          <span className="mx-2 text-slate-500 dark:text-gray-500">/</span>
+          <span className="font-medium text-slate-950 dark:text-gray-100">{title}</span>
         </nav>
       </div>
     </div>

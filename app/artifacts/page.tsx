@@ -6,10 +6,11 @@ import ArtifactsHubClient from "./_components/artifacts-hub-client";
 
 export default function ArtifactsHubPage() {
   const artifacts = [...aiml501Artifacts, ...aiml500Artifacts].map((artifact) => {
-    const courseLabel = courseConfigs[artifact.courseId].label;
+    const courseConfig = courseConfigs[artifact.courseId];
     return {
       ...artifact,
-      courseLabel,
+      courseLabel: courseConfig.label,
+      courseBadgeClassName: courseConfig.badgeClassName,
       href: `/artifacts/${artifact.slug}`,
     };
   });

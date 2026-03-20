@@ -12,6 +12,7 @@ type ArtifactCard = {
   href: string;
   courseId: CourseId;
   courseLabel: string;
+  courseBadgeClassName: string;
 };
 
 type ArtifactsHubClientProps = {
@@ -64,8 +65,8 @@ export default function ArtifactsHubClient({ artifacts }: ArtifactsHubClientProp
               onClick={() => updateFilter(option.value)}
               className={`rounded-full border px-4 py-2 text-sm transition ${
                 isActive
-                  ? "border-white/20 bg-white text-black"
-                  : "border-white/10 bg-white/5 text-gray-300 hover:bg-white/10"
+                  ? "border-slate-400 bg-slate-200 text-slate-900 shadow-sm dark:border-white/20 dark:bg-white dark:text-black"
+                  : "border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-100 dark:border-white/10 dark:bg-white/5 dark:text-gray-300 dark:hover:bg-white/10"
               }`}
             >
               {option.label}
@@ -75,7 +76,7 @@ export default function ArtifactsHubClient({ artifacts }: ArtifactsHubClientProp
       </div>
 
       <ul className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {visibleArtifacts.map(({ slug, title, description, href, courseId, courseLabel }) => {
+        {visibleArtifacts.map(({ slug, title, description, href, courseId, courseLabel, courseBadgeClassName }) => {
           const artifactHref =
             activeFilter === "all" ? href : `${href}?from=${courseId}`;
 
@@ -83,9 +84,11 @@ export default function ArtifactsHubClient({ artifacts }: ArtifactsHubClientProp
           <li key={`${courseLabel}-${slug}`}>
             <Link
               href={artifactHref}
-              className="block h-full rounded-xl bg-white p-6 shadow transition duration-200 hover:bg-neutral-100 hover:shadow-lg dark:bg-neutral-800 dark:hover:bg-neutral-700"
+              className="block h-full rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition duration-200 hover:border-slate-300 hover:bg-slate-50 hover:shadow-lg dark:border-white/10 dark:bg-neutral-800 dark:hover:bg-neutral-700"
             >
-              <span className="inline-block rounded-full bg-black/5 px-2 py-1 text-xs font-medium text-gray-700 dark:bg-white/10 dark:text-gray-300">
+              <span
+                className={`inline-block rounded-full border px-2 py-1 text-xs font-medium ${courseBadgeClassName}`}
+              >
                 {courseLabel}
               </span>
               <h2 className="mt-3 text-xl font-semibold text-gray-800 dark:text-white">{title}</h2>

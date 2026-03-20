@@ -1,13 +1,6 @@
 import { Metadata } from "next";
 import {
-  HiBolt,
-  HiCircleStack,
-  HiClock,
-  HiCloudArrowUp,
-  HiCog6Tooth,
-  HiCpuChip,
-  HiMagnifyingGlass,
-  HiServerStack,
+  HiArrowTopRightOnSquare,
 } from "react-icons/hi2";
 import {
   artifactInsetCardClass,
@@ -16,184 +9,7 @@ import {
   artifactSummaryPanelClass,
   artifactSurfacePanelClass,
 } from "@/app/_components/artifact-card-styles";
-
-type PipelineStep = {
-  step: string;
-  title: string;
-  detail: string;
-  resource: string;
-  icon: React.ReactNode;
-};
-
-type ResourceCategory = {
-  title: string;
-  level: string;
-  width: string;
-  detail: string;
-  impact: string;
-  icon: React.ReactNode;
-};
-
-type ModelExample = {
-  name: string;
-  organization: string;
-  status: string;
-  dataset: string;
-  compute: string;
-  energyTime: string;
-  cost: string;
-  note: string;
-  sourceRefs: string[];
-};
-
-const pipeline: PipelineStep[] = [
-  {
-    step: "01",
-    title: "Collect and filter data",
-    detail:
-      "Large language models start with broad text-like corpora such as books, articles, code, and conversations. The goal is coverage, not a narrow labeled dataset.",
-    resource: "Storage, data engineering, licensing, filtering",
-    icon: <HiCircleStack className="h-5 w-5" aria-hidden="true" />,
-  },
-  {
-    step: "02",
-    title: "Prepare tokens and training batches",
-    detail:
-      "Raw text is cleaned, deduplicated, tokenized, and packed into sequences the transformer can process efficiently across many machines.",
-    resource: "Preprocessing compute, storage bandwidth, pipeline tooling",
-    icon: <HiCog6Tooth className="h-5 w-5" aria-hidden="true" />,
-  },
-  {
-    step: "03",
-    title: "Pretrain the transformer",
-    detail:
-      "The model learns next-token prediction across massive token volumes. This is the most compute-intensive stage and usually defines the base model capability.",
-    resource: "Accelerator clusters, networking, GPU-hours, energy",
-    icon: <HiCpuChip className="h-5 w-5" aria-hidden="true" />,
-  },
-  {
-    step: "04",
-    title: "Fine-tune and align",
-    detail:
-      "After pretraining, teams refine the model with smaller curated datasets, human feedback, and safety-oriented post-training so output becomes more useful and controllable.",
-    resource: "Specialized data, evaluators, alignment runs, iteration time",
-    icon: <HiBolt className="h-5 w-5" aria-hidden="true" />,
-  },
-  {
-    step: "05",
-    title: "Evaluate and harden",
-    detail:
-      "Quality checks, benchmark testing, and safety reviews surface weak areas before release. This stage adds people, compute, and additional turnaround time.",
-    resource: "Benchmarks, red-teaming, validation compute, review cycles",
-    icon: <HiMagnifyingGlass className="h-5 w-5" aria-hidden="true" />,
-  },
-  {
-    step: "06",
-    title: "Deploy and serve",
-    detail:
-      "Once released, the model still consumes infrastructure through inference, monitoring, scaling, and ongoing updates. Deployment extends the resource story beyond training.",
-    resource: "Inference GPUs, monitoring, storage, platform operations",
-    icon: <HiCloudArrowUp className="h-5 w-5" aria-hidden="true" />,
-  },
-];
-
-const resources: ResourceCategory[] = [
-  {
-    title: "Datasets",
-    level: "Very High",
-    width: "92%",
-    detail:
-      "LLMs depend on broad corpora gathered from books, articles, code, websites, and conversations. Data volume matters, but curation quality matters just as much.",
-    impact: "Data quality shapes generalization, bias exposure, and downstream usefulness.",
-    icon: <HiCircleStack className="h-5 w-5" aria-hidden="true" />,
-  },
-  {
-    title: "Computational Power",
-    level: "Extreme",
-    width: "100%",
-    detail:
-      "Pretraining relies on large accelerator clusters and fast interconnects because the model repeatedly updates billions of parameters across enormous token counts.",
-    impact: "Compute is usually the biggest direct driver of training scale and infrastructure complexity.",
-    icon: <HiCpuChip className="h-5 w-5" aria-hidden="true" />,
-  },
-  {
-    title: "Energy Consumption",
-    level: "High",
-    width: "84%",
-    detail:
-      "Energy use follows sustained accelerator runtime, networking, and cooling. Public numbers are often sparse, but long training runs imply substantial electricity demand.",
-    impact: "Energy affects operating cost, sustainability discussion, and datacenter planning.",
-    icon: <HiBolt className="h-5 w-5" aria-hidden="true" />,
-  },
-  {
-    title: "Time Required",
-    level: "High",
-    width: "80%",
-    detail:
-      "Training is not just one long run. Pretraining, post-training, evaluation, and safety work together stretch timelines into many weeks or months.",
-    impact: "Time affects iteration speed, opportunity cost, and release cadence.",
-    icon: <HiClock className="h-5 w-5" aria-hidden="true" />,
-  },
-  {
-    title: "Cost",
-    level: "Compounding",
-    width: "88%",
-    detail:
-      "Total cost combines hardware access, storage, networking, energy, engineering labor, evaluation, and post-release serving. Public dollar totals are rarely disclosed.",
-    impact: "Cost grows from the interaction of all other resource categories rather than one line item.",
-    icon: <HiServerStack className="h-5 w-5" aria-hidden="true" />,
-  },
-];
-
-const modelExamples: ModelExample[] = [
-  {
-    name: "GPT-4",
-    organization: "OpenAI",
-    status: "Partially disclosed",
-    dataset: "OpenAI has not publicly disclosed the full training dataset size or composition.",
-    compute:
-      "OpenAI states GPT-4 was trained on Azure AI supercomputers, but does not publish the full pretraining compute budget or parameter count.",
-    energyTime:
-      "Exact energy use and core training duration are not public. OpenAI does report spending six months making GPT-4 safer and more aligned before launch.",
-    cost:
-      "Stanford AI Index 2025, using Epoch AI estimates, puts GPT-4 training cost at around $79 million. This is an estimate, not an official OpenAI disclosure.",
-    note:
-      "GPT-4 is a strong example of a frontier model with major public impact but limited infrastructure transparency.",
-    sourceRefs: ["R4", "R7", "R8"],
-  },
-  {
-    name: "Claude 3.7 Sonnet",
-    organization: "Anthropic",
-    status: "Estimate-heavy",
-    dataset:
-      "Anthropic does not publish a detailed dataset size breakdown or token count for this model.",
-    compute:
-      "Anthropic does not disclose GPU count, cluster size, or total training compute in public model documentation.",
-    energyTime:
-      "Public documentation does not provide training energy figures or end-to-end training duration.",
-    cost:
-      "There is no official training cost figure. Epoch AI cites Anthropic-linked comments suggesting Claude 3.7 Sonnet cost a few tens of millions of dollars to train, so this should be treated as a rough estimate rather than a confirmed total.",
-    note:
-      "Claude is still useful in the comparison because it shows what happens when public model visibility relies more on indirect estimates than on formal disclosures.",
-    sourceRefs: ["R5", "R8"],
-  },
-  {
-    name: "Llama 3.1 405B",
-    organization: "Meta",
-    status: "Most transparent of the three",
-    dataset:
-      "Meta reports pretraining on more than 15 trillion tokens, giving a clearer public signal of data scale than most proprietary frontier models.",
-    compute:
-      "Meta reports using more than 16,000 H100 GPUs and about 39.3 million GPU-hours for Llama 3.1 405B pretraining.",
-    energyTime:
-      "Meta discloses large compute-hours, which strongly implies substantial energy demand and a long-running distributed training effort, even though a direct energy total is not foregrounded.",
-    cost:
-      "Stanford AI Index 2025, using Epoch AI estimates, puts Llama 3.1 405B training cost at about $170 million. This is an estimate, not a direct Meta cost disclosure.",
-    note:
-      "Llama provides the most concrete public infrastructure numbers in this comparison, which makes it a useful anchor for scale discussions.",
-    sourceRefs: ["R6", "R7", "R8"],
-  },
-];
+import { modelExamples, pipeline, resources } from "./_data";
 
 const references = [
   {
@@ -296,6 +112,13 @@ export default function LLMTrainingInfrastructurePage() {
             deployed systems, and what that process demands in data, compute, energy, time, and
             cost.
           </p>
+          <a
+            href="/artifacts/llm-training-infrastructure/graphic"
+            className="mt-5 inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-cyan-300/60 hover:text-slate-900 dark:border-white/10 dark:text-gray-200 dark:hover:border-cyan-300/30 dark:hover:text-white"
+          >
+            Open Graphic View
+            <HiArrowTopRightOnSquare className="h-4 w-4" aria-hidden="true" />
+          </a>
         </header>
 
         <section className="mb-10 mt-8 grid gap-5 xl:grid-cols-[1fr_1fr]">
@@ -437,7 +260,7 @@ export default function LLMTrainingInfrastructurePage() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center text-sm font-medium text-slate-700 dark:border-white/10 dark:bg-black/20 dark:text-gray-200"
+                  className="rounded-2xl border border-slate-300 bg-white p-4 text-center text-sm font-medium text-slate-700 shadow-sm dark:border-white/10 dark:bg-black/20 dark:text-gray-200"
                 >
                   {item}
                 </div>

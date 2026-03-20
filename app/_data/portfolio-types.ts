@@ -22,4 +22,5 @@ export type CourseConfig = {
   description: string;
   bio: string;
   valueProposition: string;
+  badgeClassName: string;
 };
