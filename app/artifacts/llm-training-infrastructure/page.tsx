@@ -113,7 +113,7 @@ export default function LLMTrainingInfrastructurePage() {
             cost.
           </p>
           <a
-            href="/artifacts/llm-training-infrastructure/graphic"
+            href="/aiml-501/artifacts/llm-training-infrastructure/graphic"
             className="mt-5 inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-cyan-300/60 hover:text-slate-900 dark:border-white/10 dark:text-gray-200 dark:hover:border-cyan-300/30 dark:hover:text-white"
           >
             Open Graphic View

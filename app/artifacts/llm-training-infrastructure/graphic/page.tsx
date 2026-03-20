@@ -15,7 +15,7 @@ export default function LLMTrainingGraphicPage() {
       <article className="mx-auto w-full max-w-[1400px] rounded-[32px] border border-white/10 bg-[linear-gradient(160deg,#0f172a,#111827_55%,#0b1120)] p-10 shadow-[0_30px_120px_rgba(0,0,0,0.35)]">
         <header className="border-b border-white/10 pb-8">
           <Link
-            href="/artifacts/llm-training-infrastructure"
+            href="/aiml-501/artifacts/llm-training-infrastructure"
             className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-200 transition hover:border-cyan-300/30 hover:text-white"
           >
             <HiArrowLeft className="h-4 w-4" aria-hidden="true" />

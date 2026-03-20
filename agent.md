@@ -54,6 +54,18 @@ Every AIML-501 artifact entry must include:
 - Relevance
 - References (if applicable)
 
+## Route Structure Notes
+
+- `app/artifacts/` is the source-of-truth content directory for artifact pages across courses.
+- New artifact implementations should be created under `app/artifacts/<slug>/...`.
+- Course-prefixed routes such as `app/aiml-500/artifacts/...` and `app/aiml-501/artifacts/...` exist only as route aliases for navigation, sharing, or course-specific URL structure.
+- Do not build or maintain separate content copies under course-prefixed directories unless there is a route-specific behavior that cannot be handled by aliasing.
+- For AIML-501 specifically:
+  - `app/aiml-501/artifacts/[slug]/page.tsx` is an alias layer
+  - `app/artifacts/<slug>/page.tsx` remains the real page implementation
+- Nested special-case routes such as graphic/export views may keep a small explicit alias file if the framework route generation works better that way.
+- Do not delete `app/aiml-500/artifacts` or `app/aiml-501/artifacts` as duplicates without first checking whether they are route aliases.
+
 ## Artifact-Specific Value Proposition Rule
 
 For each artifact, add value proposition content that answers:

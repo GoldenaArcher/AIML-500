@@ -14,11 +14,11 @@ Another important consideration is accessibility. The page was designed to be re
 
 I chose an infographic-style layout instead of a slide deck because it works better inside the portfolio site and allows the artifact to function as both a visual and a reference page. The layout uses repeated card patterns, simple resource bars, and a clear pipeline sequence so the page stays structured and easy to scan.
 
-I also created a separate graphic view at `/artifacts/llm-training-infrastructure/graphic` so the visual can be captured cleanly as a standalone image if needed for submission. That route condenses the most important information into one export-friendly layout without requiring the full artifact page.
+I also created a separate graphic view at `/aiml-501/artifacts/llm-training-infrastructure/graphic` so the visual can be captured cleanly as a standalone image if needed for submission. That route condenses the most important information into one export-friendly layout without requiring the full artifact page.
 
 The recommended way to generate the image is:
 
-1. Open `/artifacts/llm-training-infrastructure/graphic` in the browser.
+1. Open `/aiml-501/artifacts/llm-training-infrastructure/graphic` in the browser.
 2. Set browser zoom to `100%`.
 3. Use a full-page screenshot or built-in browser capture tool.
 4. If a single PNG is not required, print the page to PDF as a fallback.
