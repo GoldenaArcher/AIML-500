@@ -3,6 +3,41 @@ import { ArtifactEntry } from "./portfolio-types";
 export const aiml501Artifacts: ArtifactEntry[] = [
   {
     courseId: "aiml-501",
+    slug: "llm-training-infrastructure",
+    title: "LLM Training Process and Infrastructure",
+    description:
+      "An infographic-style explanation of how large language models are trained, what resources they consume, and where public disclosure still falls short.",
+    introduction:
+      "This artifact breaks LLM development into a visual training pipeline and connects each stage to the datasets, compute, energy, time, and cost pressures behind it.",
+    objective:
+      "Create a portfolio-ready visual explanation of generative AI training that is accessible to mixed audiences and grounded in publicly available model information.",
+    process: [
+      "Reviewed the assigned videos and article to capture the core training concepts behind large language models.",
+      "Mapped the full lifecycle from data collection through deployment into a visual pipeline.",
+      "Organized the major resource categories around dataset scale, compute, energy, time, and cost.",
+      "Compared GPT-4, Claude, and Llama using only publicly available training-resource signals.",
+      "Built the page as an infographic with an explanatory document section for design rationale and key considerations.",
+    ],
+    tools: ["Next.js", "React", "TypeScript", "Tailwind CSS", "VS Code"],
+    valueProposition:
+      "Turns an abstract topic into a decision-ready visual that helps learners and technical stakeholders see where LLM cost and complexity actually come from.",
+    uniqueValue:
+      "Shows both the training pipeline and the public-disclosure gaps around frontier models instead of presenting model names without infrastructure context.",
+    relevance:
+      "Useful for students, technical teams, and non-specialist stakeholders who need a practical picture of what it takes to train and ship generative AI systems.",
+    references: [
+      "How Large Language Models Work (YouTube)",
+      "What is ChatGPT? (YouTube)",
+      "Stephen Wolfram, What is ChatGPT doing and why does it work?",
+      "OpenAI GPT-4",
+      "Anthropic Claude 3.7 Sonnet",
+      "Meta Llama 3.1",
+      "Stanford HAI AI Index Report 2025",
+      "Epoch AI frontier-model cost estimates",
+    ],
+  },
+  {
+    courseId: "aiml-501",
     slug: "neural-network-components",
     title: "Neural Network Components",
     description:
