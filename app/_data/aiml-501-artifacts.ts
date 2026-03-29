@@ -3,6 +3,43 @@ import { ArtifactEntry } from "./portfolio-types";
 export const aiml501Artifacts: ArtifactEntry[] = [
   {
     courseId: "aiml-501",
+    slug: "explainable-ai-trust-in-llms",
+    title: "Explainable AI, Validation, and Trust in LLMs",
+    description:
+      "An infographic-style artifact showing why LLM explainability is hard, how validation builds trust, and what major AI labs are doing to improve transparency.",
+    introduction:
+      "This artifact separates the trust problem into three connected layers: explainability, validation, and organizational safety practices across GPT, Claude, Gemini, and Llama.",
+    objective:
+      "Create a clear visual explanation of why LLM decisions are difficult to interpret, which techniques improve transparency, and how validation metrics support reliability and accountability.",
+    process: [
+      "Reviewed assignment guidance on opacity, post-hoc explanations, data bias, visualization, and chain-of-thought reasoning.",
+      "Researched official documentation and research from OpenAI, Anthropic, Google, and Meta.",
+      "Organized the page around four blocks: what explainable AI is, why LLM explainability is hard, how validation works, and what leading labs are doing.",
+      "Separated interpretability methods from validation metrics so the trust story stayed accurate instead of collapsing everything into one category.",
+      "Added a combined explanatory-document-plus-reflection submission file.",
+    ],
+    tools: ["Next.js", "React", "TypeScript", "Tailwind CSS", "VS Code"],
+    valueProposition:
+      "Helps mixed audiences understand that trust in generative AI depends on both model transparency efforts and measurable validation practices.",
+    uniqueValue:
+      "Frames explainability, validation, and industry safeguards as complementary layers rather than treating them as interchangeable buzzwords.",
+    relevance:
+      "Useful for students, product teams, and non-specialist stakeholders who need a realistic view of what current LLM transparency can and cannot provide.",
+    references: [
+      "OpenAI evaluation best practices",
+      "OpenAI Model Spec",
+      "Anthropic Constitutional AI",
+      "Anthropic Mapping the Mind of a Large Language Model",
+      "Anthropic Tracing the thoughts of a large language model",
+      "Google Vertex AI Gen AI evaluation service",
+      "Google Vertex AI model observability",
+      "Meta Llama 3.1 model card",
+      "Meta Llama 3.1 evaluation result details",
+      "AIML-501 assignment brief and rubric requirements",
+    ],
+  },
+  {
+    courseId: "aiml-501",
     slug: "llm-training-infrastructure",
     title: "LLM Training Process and Infrastructure",
     description:

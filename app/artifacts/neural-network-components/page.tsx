@@ -9,6 +9,7 @@ import {
   artifactSummaryPanelClass,
   artifactSurfacePanelClass,
 } from "@/app/_components/artifact-card-styles";
+import { ToolBadge } from "@/app/_components/tool-badge";
 
 import linearActivation4Layers from "@/app/_assets/aiml-501/neuralnetwork-components/linear-activation-4-layers.png";
 import sigmoidActivation4Layers from "@/app/_assets/aiml-501/neuralnetwork-components/sigmoid-activation-4-layers.png";
@@ -349,12 +350,11 @@ export default function NeuralNetworkComponentsPage() {
         </Section>
 
         <Section title="Tools/Technologies Used">
-          <ul className="list-disc space-y-2 pl-6">
-            <li>TensorFlow Playground for neural network experiments and screenshots</li>
-            <li>Next.js and React for the portfolio artifact page</li>
-            <li>TypeScript and Tailwind CSS for implementation and styling</li>
-            <li>VS Code for authoring and editing</li>
-          </ul>
+          <div className="grid grid-cols-2 gap-4 xl:grid-cols-5">
+            {["TensorFlow Playground", "Next.js", "React", "TypeScript", "Tailwind CSS", "VS Code"].map((tool) => (
+              <ToolBadge key={tool} tool={tool} />
+            ))}
+          </div>
         </Section>
 
         <Section title="Value Proposition">

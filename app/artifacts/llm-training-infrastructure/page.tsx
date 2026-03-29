@@ -10,6 +10,7 @@ import {
   artifactSummaryPanelClass,
   artifactSurfacePanelClass,
 } from "@/app/_components/artifact-card-styles";
+import { ToolBadge } from "@/app/_components/tool-badge";
 import { modelExamples, pipeline, resources } from "./_data";
 
 const references = [
@@ -408,12 +409,11 @@ export default function LLMTrainingInfrastructurePage() {
         </Section>
 
         <Section title="Tools/Technologies Used">
-          <ul className="list-disc space-y-2 pl-6">
-            <li>Next.js and React for artifact structure and presentation</li>
-            <li>TypeScript for structured content and comparison data</li>
-            <li>Tailwind CSS for infographic-style layout and responsive design</li>
-            <li>VS Code for research notes, drafting, and implementation</li>
-          </ul>
+          <div className="grid grid-cols-2 gap-4 xl:grid-cols-5">
+            {["Next.js", "React", "TypeScript", "Tailwind CSS", "VS Code"].map((tool) => (
+              <ToolBadge key={tool} tool={tool} />
+            ))}
+          </div>
         </Section>
 
         <Section title="Value Proposition">
