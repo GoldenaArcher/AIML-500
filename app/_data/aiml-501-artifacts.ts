@@ -3,6 +3,41 @@ import { ArtifactEntry } from "./portfolio-types";
 export const aiml501Artifacts: ArtifactEntry[] = [
   {
     courseId: "aiml-501",
+    slug: "pretrained-model-decision-matrix",
+    title: "Pre-Trained Model Decision Matrix",
+    description:
+      "A cross-domain comparison of NLP, vision, and tabular models using size, accuracy, speed, and explainability trade-offs.",
+    introduction:
+      "This artifact compares widely used model families across NLP, computer vision, and tabular data to show how size, benchmark quality, and runtime signals shape real deployment decisions.",
+    objective:
+      "Build a clear decision matrix that helps mixed audiences compare pre-trained models by model size, benchmark performance, speed, and practical integration trade-offs.",
+    process: [
+      "Selected four-plus widely used models with published signals for size, benchmark performance, and speed.",
+      "Used model cards, papers, and official application tables where available.",
+      "Separated absolute benchmark values from relative speed signals so the matrix would stay honest across domains.",
+      "Added explainability and integration notes because raw performance alone is not enough for model choice.",
+      "Organized the artifact into methodology, decision matrix, trade-off analysis, recommendations, and conclusion.",
+    ],
+    tools: ["Next.js", "React", "TypeScript", "Tailwind CSS", "VS Code"],
+    valueProposition:
+      "Gives learners and teams a practical way to compare model families without reducing every decision to accuracy alone.",
+    uniqueValue:
+      "Combines domain-specific benchmark data with deployment-oriented factors such as speed, memory, and explainability in one matrix.",
+    relevance:
+      "Useful for coursework, stakeholder communication, and early model selection when teams need a fast but defensible comparison across domains.",
+    references: [
+      "BERT base model card",
+      "DistilBERT model card",
+      "DistilBERT paper",
+      "Keras Applications model table",
+      "Prior Labs TabPFN v2 model card",
+      "TabPFN paper",
+      "Prior Labs model comparison documentation",
+      "AIML-501 assignment brief and rubric requirements",
+    ],
+  },
+  {
+    courseId: "aiml-501",
     slug: "explainable-ai-trust-in-llms",
     title: "Explainable AI, Validation, and Trust in LLMs",
     description:

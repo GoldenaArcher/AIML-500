@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import {
-  artifactInsetCardClass,
+  artifactPageShellClass,
+  artifactStandardCardCompactClass,
+  artifactSurfacePanelCompactClass,
   artifactStandardCardClass,
-  artifactSurfacePanelClass,
 } from "@/app/_components/artifact-card-styles";
 import { ToolBadge } from "@/app/_components/tool-badge";
 import {
@@ -82,7 +83,7 @@ function HighlightPanel({
   eyebrow: string;
 }) {
   return (
-    <div className={artifactStandardCardClass}>
+    <div className={artifactStandardCardCompactClass}>
       <p className={`text-xs uppercase tracking-[0.28em] ${accent}`}>{eyebrow}</p>
       <h2 className="mt-3 text-2xl font-semibold text-slate-900 dark:text-gray-100">{title}</h2>
       <div className="mt-4 text-slate-700 dark:text-gray-300">{children}</div>
@@ -109,7 +110,7 @@ export default function ExplainableAITrustInLLMsPage() {
   const tools = ["Next.js", "React", "TypeScript", "Tailwind CSS", "VS Code"];
 
   return (
-    <main className="mx-auto max-w-[1280px] px-8 py-16">
+    <main className={artifactPageShellClass}>
       <article>
         <header>
           <h1 className="mb-4 text-4xl font-bold text-slate-900 dark:text-white">
@@ -177,7 +178,7 @@ export default function ExplainableAITrustInLLMsPage() {
         <Section title="Explainable AI and Why It Matters">
           <div className="grid gap-5 lg:grid-cols-3">
             {focusCards.map((card) => (
-              <div key={card.title} className={artifactStandardCardClass}>
+              <div key={card.title} className={artifactStandardCardCompactClass}>
                 <div className="flex items-center gap-3 text-cyan-700 dark:text-cyan-200">
                   {card.icon}
                   <span className="text-xs font-semibold uppercase tracking-[0.2em]">
@@ -198,7 +199,7 @@ export default function ExplainableAITrustInLLMsPage() {
         <Section title="Challenges in Explainability">
           <div className="grid gap-5 lg:grid-cols-2">
             {challengeCards.map((card) => (
-              <div key={card.title} className={artifactStandardCardClass}>
+              <div key={card.title} className={artifactStandardCardCompactClass}>
                 <div className="flex items-center gap-3 text-amber-700 dark:text-amber-200">
                   {card.icon}
                   <span className="text-xs font-semibold uppercase tracking-[0.2em]">
@@ -225,10 +226,10 @@ export default function ExplainableAITrustInLLMsPage() {
         </Section>
 
         <Section title="Validation and Performance Metrics">
-          <div className={artifactSurfacePanelClass}>
+          <div className={artifactSurfacePanelCompactClass}>
             <div className="grid gap-5 lg:grid-cols-2">
               {metricsCards.map((card) => (
-                <div key={card.title} className={artifactStandardCardClass}>
+                <div key={card.title} className={artifactStandardCardCompactClass}>
                   <div className="flex items-center gap-3 text-emerald-700 dark:text-emerald-200">
                     {card.icon}
                     <span className="text-xs font-semibold uppercase tracking-[0.2em]">
@@ -265,7 +266,7 @@ export default function ExplainableAITrustInLLMsPage() {
         <Section title="Current Solutions and Industry Techniques">
           <div className="grid gap-5 lg:grid-cols-2">
             {organizationCards.map((card) => (
-              <div key={card.organization} className={artifactStandardCardClass}>
+              <div key={card.organization} className={artifactStandardCardCompactClass}>
                 <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-500 dark:text-cyan-300">
                   {card.organization}
                 </p>

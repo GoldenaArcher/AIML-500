@@ -4,11 +4,14 @@ import {
   HiArrowTopRightOnSquare,
 } from "react-icons/hi2";
 import {
+  artifactPageShellClass,
   artifactInsetCardClass,
   artifactStandardCardClass,
+  artifactStandardCardCompactClass,
   artifactSubsectionDividerClass,
   artifactSummaryPanelClass,
   artifactSurfacePanelClass,
+  artifactSurfacePanelCompactClass,
 } from "@/app/_components/artifact-card-styles";
 import { ToolBadge } from "@/app/_components/tool-badge";
 import { modelExamples, pipeline, resources } from "./_data";
@@ -102,8 +105,35 @@ function Section({
 }
 
 export default function LLMTrainingInfrastructurePage() {
+  const infographicStages = [
+    {
+      label: "Data",
+      title: "Collect and prepare text",
+      detail: "Raw text is filtered, cleaned, deduplicated, and tokenized before the model ever starts learning.",
+      icon: pipeline[0]?.icon,
+    },
+    {
+      label: "Pretrain",
+      title: "Teach next-token prediction at scale",
+      detail: "The transformer learns broad language patterns across massive token volumes using large accelerator clusters.",
+      icon: pipeline[2]?.icon,
+    },
+    {
+      label: "Align",
+      title: "Fine-tune for usefulness and safety",
+      detail: "Post-training adds instruction tuning, evaluation loops, and human feedback to shape behavior.",
+      icon: pipeline[3]?.icon,
+    },
+    {
+      label: "Deploy",
+      title: "Serve, monitor, and keep paying",
+      detail: "Costs continue after training through inference, monitoring, storage, and platform operations.",
+      icon: pipeline[5]?.icon,
+    },
+  ];
+
   return (
-    <main className="mx-auto max-w-[1280px] px-8 py-16">
+    <main className={artifactPageShellClass}>
       <article>
         <header>
           <h1 className="mb-4 text-4xl font-bold text-slate-900 dark:text-white">
@@ -177,6 +207,94 @@ export default function LLMTrainingInfrastructurePage() {
             </ol>
           </HighlightPanel>
         </section>
+
+        <Section title="Lifecycle Overview">
+          <div className={artifactSurfacePanelCompactClass}>
+            <div className="grid gap-6 xl:grid-cols-[1.15fr_1fr]">
+              <div className={`${artifactSurfacePanelCompactClass} border-cyan-300/30 bg-[radial-gradient(circle_at_top,rgba(8,145,178,0.12),transparent_55%)] dark:border-cyan-300/15`}>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.28em] text-cyan-700 dark:text-cyan-200">
+                      Lifecycle
+                    </p>
+                    <h3 className="mt-2 text-xl font-semibold text-slate-900 dark:text-gray-100 sm:text-2xl">
+                      From data to deployment
+                    </h3>
+                  </div>
+                  <p className="max-w-sm text-sm leading-6 text-slate-600 dark:text-gray-300 sm:text-right">
+                    A shorter visual map of the process before the detailed pipeline below.
+                  </p>
+                </div>
+
+                <div className="mt-5 space-y-3 sm:mt-6 sm:space-y-4">
+                  {infographicStages.map((stage, index) => (
+                    <div key={stage.label} className="relative sm:pl-16">
+                      {index < infographicStages.length - 1 ? (
+                        <div className="absolute left-[1.18rem] top-9 h-[calc(100%+0.75rem)] w-px bg-gradient-to-b from-cyan-400/80 to-cyan-200/10 dark:from-cyan-300/80 dark:to-cyan-300/5 sm:left-[1.55rem] sm:top-10" />
+                      ) : null}
+                      <div className="flex items-start gap-3 sm:block">
+                        <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-cyan-300 bg-cyan-50 text-cyan-700 shadow-sm dark:border-cyan-300/25 dark:bg-cyan-500/10 dark:text-cyan-200 sm:absolute sm:left-0 sm:top-1 sm:mt-0 sm:h-12 sm:w-12">
+                          {stage.icon}
+                        </div>
+                        <div className={`${artifactStandardCardCompactClass} min-w-0 flex-1 border-slate-300/80 bg-white/80 shadow-sm dark:border-white/10 dark:bg-white/5`}>
+                          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+                            <span className="w-fit rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-cyan-700 dark:border-cyan-300/20 dark:bg-cyan-500/10 dark:text-cyan-200">
+                              {stage.label}
+                            </span>
+                            <h4 className="text-lg font-semibold text-slate-900 dark:text-gray-100">
+                              {stage.title}
+                            </h4>
+                          </div>
+                          <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-gray-300 sm:leading-7">
+                            {stage.detail}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className={`${artifactSurfacePanelCompactClass} border-emerald-300/30 bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.10),transparent_58%)] dark:border-emerald-300/15`}>
+                <p className="text-xs uppercase tracking-[0.28em] text-emerald-700 dark:text-emerald-200">
+                  Resource Pressure
+                </p>
+                <h3 className="mt-2 text-2xl font-semibold text-slate-900 dark:text-gray-100">
+                  What makes training expensive
+                </h3>
+                <div className="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-2 sm:gap-4">
+                  {resources.map((resource) => (
+                    <div
+                      key={resource.title}
+                      className={`${artifactStandardCardCompactClass} border-slate-300/80 bg-white/80 shadow-sm dark:border-white/10 dark:bg-white/5`}
+                    >
+                      <div className="flex items-center justify-between gap-3">
+                        <div className="flex items-center gap-3 text-cyan-700 dark:text-cyan-200">
+                          <span>{resource.icon}</span>
+                          <p className="text-base font-semibold text-slate-900 dark:text-gray-100">
+                            {resource.title}
+                          </p>
+                        </div>
+                        <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[11px] font-medium text-slate-600 dark:border-white/10 dark:bg-black/20 dark:text-gray-300">
+                          {resource.level}
+                        </span>
+                      </div>
+                      <div className="mt-4 h-2.5 rounded-full bg-slate-100 dark:bg-white/10">
+                        <div
+                          className="h-2.5 rounded-full bg-[linear-gradient(90deg,#0891b2,#38bdf8,#10b981)]"
+                          style={{ width: resource.width }}
+                        />
+                      </div>
+                      <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-gray-300">
+                        {resource.impact}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </Section>
 
         <Section title="Training Pipeline">
           <div className={artifactSurfacePanelClass}>
