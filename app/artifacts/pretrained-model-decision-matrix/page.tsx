@@ -122,6 +122,33 @@ function NumericRefs({ refs }: { refs: string[] }) {
 
 export default function PretrainedModelDecisionMatrixPage() {
   const tools = ["Next.js", "React", "TypeScript", "Tailwind CSS", "VS Code"];
+  const decisionDomains = [
+    {
+      label: "NLP",
+      models: "BERT Base or DistilBERT",
+      accent:
+        "border-cyan-200 bg-cyan-50 text-cyan-700 dark:border-cyan-300/20 dark:bg-cyan-500/10 dark:text-cyan-200",
+    },
+    {
+      label: "Vision",
+      models: "MobileNetV2 or EfficientNetB0",
+      accent:
+        "border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-300/20 dark:bg-emerald-500/10 dark:text-emerald-200",
+    },
+    {
+      label: "Tabular",
+      models: "TabPFN v2",
+      accent:
+        "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-300/20 dark:bg-amber-500/10 dark:text-amber-200",
+    },
+  ];
+
+  const decisionConstraints = [
+    "Speed / memory",
+    "Accuracy",
+    "Explainability",
+  ];
+
   const overviewDomains = [
     {
       label: "NLP",
@@ -245,6 +272,100 @@ export default function PretrainedModelDecisionMatrixPage() {
             </ol>
           </HighlightPanel>
         </section>
+
+        <Section title="Decision Path Diagram">
+          <div className={artifactSurfacePanelCompactClass}>
+            <div className="mx-auto max-w-5xl">
+              <div className="flex flex-col items-center">
+                <div className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-gray-100">
+                  Start model selection
+                </div>
+                <div className="h-6 w-px bg-gradient-to-b from-cyan-400 to-cyan-200/10 dark:from-cyan-300 dark:to-cyan-300/5" />
+
+                <div className={`${artifactStandardCardCompactClass} w-full max-w-xl border-cyan-300/40 bg-white/80 text-center shadow-sm dark:border-cyan-300/15 dark:bg-white/5`}>
+                  <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-cyan-300 bg-cyan-50 text-cyan-700 dark:border-cyan-300/20 dark:bg-cyan-500/10 dark:text-cyan-200">
+                    <HiLanguage className="h-5 w-5" aria-hidden="true" />
+                  </div>
+                  <p className="mt-3 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700 dark:text-cyan-200">
+                    Step 1
+                  </p>
+                  <h3 className="mt-2 text-lg font-semibold text-slate-900 dark:text-gray-100">
+                    Which domain are you solving for?
+                  </h3>
+                </div>
+
+                <div className="h-6 w-px bg-gradient-to-b from-cyan-400 to-cyan-200/10 dark:from-cyan-300 dark:to-cyan-300/5" />
+
+                <div className="w-full">
+                  <div className="relative hidden px-[16.66%] md:block">
+                    <div className="mx-auto h-px w-[66%] bg-gradient-to-r from-cyan-300/20 via-cyan-400 to-cyan-300/20 dark:from-cyan-300/10 dark:via-cyan-300 dark:to-cyan-300/10" />
+                    <div className="absolute left-[16.66%] top-0 h-5 w-px bg-gradient-to-b from-cyan-400 to-cyan-200/10 dark:from-cyan-300 dark:to-cyan-300/5" />
+                    <div className="absolute left-1/2 top-0 h-5 w-px -translate-x-1/2 bg-gradient-to-b from-cyan-400 to-cyan-200/10 dark:from-cyan-300 dark:to-cyan-300/5" />
+                    <div className="absolute right-[16.66%] top-0 h-5 w-px bg-gradient-to-b from-cyan-400 to-cyan-200/10 dark:from-cyan-300 dark:to-cyan-300/5" />
+                  </div>
+
+                  <div className="grid gap-3 md:grid-cols-3">
+                    {decisionDomains.map((item) => (
+                      <div
+                        key={item.label}
+                        className={`${artifactStandardCardCompactClass} border-slate-300/80 bg-white/80 text-center shadow-sm dark:border-white/10 dark:bg-white/5`}
+                      >
+                        <span className={`inline-flex rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] ${item.accent}`}>
+                          {item.label}
+                        </span>
+                        <p className="mt-3 text-sm font-medium leading-6 text-slate-700 dark:text-gray-200">
+                          {item.models}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-6 h-6 w-px bg-gradient-to-b from-violet-400 to-violet-200/10 dark:from-violet-300 dark:to-violet-300/5" />
+
+                <div className={`${artifactStandardCardCompactClass} w-full max-w-xl border-violet-300/40 bg-white/80 text-center shadow-sm dark:border-violet-300/15 dark:bg-white/5`}>
+                  <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-violet-300 bg-violet-50 text-violet-700 dark:border-violet-300/20 dark:bg-violet-500/10 dark:text-violet-200">
+                    <HiScale className="h-5 w-5" aria-hidden="true" />
+                  </div>
+                  <p className="mt-3 text-xs font-semibold uppercase tracking-[0.2em] text-violet-700 dark:text-violet-200">
+                    Step 2
+                  </p>
+                  <h3 className="mt-2 text-lg font-semibold text-slate-900 dark:text-gray-100">
+                    What matters most in deployment?
+                  </h3>
+                  <div className="mt-4 flex flex-wrap justify-center gap-2">
+                    {decisionConstraints.map((constraint) => (
+                      <span
+                        key={constraint}
+                        className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[11px] font-medium text-slate-600 dark:border-white/10 dark:bg-black/20 dark:text-gray-300"
+                      >
+                        {constraint}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="h-6 w-px bg-gradient-to-b from-emerald-400 to-emerald-200/10 dark:from-emerald-300 dark:to-emerald-300/5" />
+
+                <div className={`${artifactStandardCardCompactClass} w-full max-w-2xl border-emerald-300/40 bg-white/80 text-center shadow-sm dark:border-emerald-300/15 dark:bg-white/5`}>
+                  <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-300/20 dark:bg-emerald-500/10 dark:text-emerald-200">
+                    <HiBolt className="h-5 w-5" aria-hidden="true" />
+                  </div>
+                  <p className="mt-3 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-200">
+                    Step 3
+                  </p>
+                  <h3 className="mt-2 text-lg font-semibold text-slate-900 dark:text-gray-100">
+                    Use the matrix to choose the best-fit model
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-gray-300">
+                    DistilBERT and MobileNetV2 fit speed-first cases, BERT Base and EfficientNetB0
+                    fit accuracy-first cases, and TabPFN v2 fits fast tabular baseline selection.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Section>
 
         <Section title="Model Fit Overview">
           <div className={artifactSurfacePanelCompactClass}>
