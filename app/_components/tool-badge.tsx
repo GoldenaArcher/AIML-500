@@ -1,5 +1,6 @@
 import { clsx } from "clsx";
 import { HiCodeBracketSquare } from "react-icons/hi2";
+import { FaRegFilePowerpoint, FaWandMagicSparkles } from "react-icons/fa6";
 import {
   SiNextdotjs,
   SiReact,
@@ -11,6 +12,8 @@ import { VscVscode } from "react-icons/vsc";
 import { artifactStandardCardClass } from "@/app/_components/artifact-card-styles";
 
 const iconMap = {
+  PowerPoint: FaRegFilePowerpoint,
+  "Image generation workflow": FaWandMagicSparkles,
   "Next.js": SiNextdotjs,
   React: SiReact,
   TypeScript: SiTypescript,

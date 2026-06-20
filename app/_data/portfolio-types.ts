@@ -1,4 +1,4 @@
-export type CourseId = "aiml-500" | "aiml-501";
+export type CourseId = "aiml-500" | "aiml-501" | "aiml-510";
 
 export type ArtifactEntry = {
   courseId: CourseId;

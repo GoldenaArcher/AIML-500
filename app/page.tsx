@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HiArrowRight } from "react-icons/hi2";
 import Reveal from "@/app/_components/reveal";
 
 export default function Home() {
@@ -40,12 +41,15 @@ export default function Home() {
         <section className="mt-8 sm:mt-24 mb-8 sm:mb-18">
           <h2 className="text-2xl font-semibold">Artifacts</h2>
           <p className="mt-2 max-w-[100%] text-slate-800 dark:text-gray-300 sm:max-w-[720px]">
-            Browse portfolio artifacts by course on the{" "}
-            <Link href="/artifacts" className="underline decoration-slate-400 underline-offset-4 hover:text-teal-600">
-              artifacts page
-            </Link>
-            .
+            Browse portfolio artifacts by course, including AIML-500, AIML-501, and AIML-510.
           </p>
+          <Link
+            href="/artifacts"
+            className="mt-5 inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-slate-950 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/25 dark:border-white/10 dark:bg-white dark:text-slate-950 dark:hover:bg-gray-200 dark:focus:ring-white/30"
+          >
+            View artifacts
+            <HiArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
         </section>
       </Reveal>
     </main>

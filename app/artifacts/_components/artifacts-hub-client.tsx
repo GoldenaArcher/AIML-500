@@ -23,6 +23,7 @@ const filterOptions: Array<{ label: string; value: "all" | CourseId }> = [
   { label: "All", value: "all" },
   { label: "AIML-500", value: "aiml-500" },
   { label: "AIML-501", value: "aiml-501" },
+  { label: "AIML-510", value: "aiml-510" },
 ];
 
 export default function ArtifactsHubClient({ artifacts }: ArtifactsHubClientProps) {
@@ -31,7 +32,9 @@ export default function ArtifactsHubClient({ artifacts }: ArtifactsHubClientProp
   const searchParams = useSearchParams();
   const selectedCourse = searchParams.get("course");
   const activeFilter =
-    selectedCourse === "aiml-500" || selectedCourse === "aiml-501" ? selectedCourse : "all";
+    selectedCourse === "aiml-500" || selectedCourse === "aiml-501" || selectedCourse === "aiml-510"
+      ? selectedCourse
+      : "all";
 
   const visibleArtifacts = useMemo(
     () =>

@@ -7,7 +7,9 @@ export default function ArtifactBreadcrumb() {
   const searchParams = useSearchParams();
   const from = searchParams.get("from");
   const artifactsHref =
-    from === "aiml-500" || from === "aiml-501" ? `/artifacts?course=${from}` : "/artifacts";
+    from === "aiml-500" || from === "aiml-501" || from === "aiml-510"
+      ? `/artifacts?course=${from}`
+      : "/artifacts";
 
   return (
     <div className="mx-auto max-w-[1280px] px-8 pt-8">

@@ -4,9 +4,13 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { aiml500Artifacts } from "@/app/_data/aiml-500-artifacts";
 import { aiml501Artifacts } from "@/app/_data/aiml-501-artifacts";
+import { aiml510Artifacts } from "@/app/_data/aiml-510-artifacts";
 
 const artifactMap = new Map(
-  [...aiml500Artifacts, ...aiml501Artifacts].map((artifact) => [artifact.slug, artifact.title])
+  [...aiml500Artifacts, ...aiml501Artifacts, ...aiml510Artifacts].map((artifact) => [
+    artifact.slug,
+    artifact.title,
+  ])
 );
 
 export default function ArtifactContextBar() {
@@ -17,7 +21,9 @@ export default function ArtifactContextBar() {
   const slug = segments.at(-1);
   const title = slug ? artifactMap.get(slug) : null;
   const artifactsHref =
-    from === "aiml-500" || from === "aiml-501" ? `/artifacts?course=${from}` : "/artifacts";
+    from === "aiml-500" || from === "aiml-501" || from === "aiml-510"
+      ? `/artifacts?course=${from}`
+      : "/artifacts";
 
   if (!title || pathname === "/artifacts") {
     return null;

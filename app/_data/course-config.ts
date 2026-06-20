@@ -10,7 +10,7 @@ export const courseConfigs: Record<CourseConfig["id"], CourseConfig> = {
     valueProposition:
       "I bridge software engineering rigor with AI learning outcomes, turning complex topics into practical, reusable artifacts.",
     badgeClassName:
-      "border-sky-200 bg-sky-50 text-sky-800 dark:border-sky-300/20 dark:bg-sky-500/10 dark:text-sky-200",
+      "border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-300/25 dark:bg-amber-400/10 dark:text-amber-200",
   },
   "aiml-501": {
     id: "aiml-501",
@@ -22,5 +22,16 @@ export const courseConfigs: Record<CourseConfig["id"], CourseConfig> = {
       "I translate complex AI/ML concepts into structured frameworks that help stakeholders choose practical, responsible solutions faster.",
     badgeClassName:
       "border-cyan-200 bg-cyan-50 text-cyan-800 dark:border-cyan-300/20 dark:bg-cyan-500/10 dark:text-cyan-200",
+  },
+  "aiml-510": {
+    id: "aiml-510",
+    label: "AIML-510",
+    title: "AIML-510 Professional Portfolio",
+    description: "Artifacts and coursework from AIML-510.",
+    bio: "I apply responsible AI thinking to practical product and governance problems, connecting ethics, implementation controls, and customer trust.",
+    valueProposition:
+      "I turn Responsible AI principles into operating models that product and engineering teams can actually use.",
+    badgeClassName:
+      "border-indigo-200 bg-indigo-50 text-indigo-800 dark:border-indigo-300/20 dark:bg-indigo-500/10 dark:text-indigo-200",
   },
 };
